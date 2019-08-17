@@ -9,7 +9,7 @@ const Navigation = () => {
           Wedge Edge
         </Link>
         <button
-          className="navbar-toggler navbar-toggler-right"
+          class="navbar-toggler navbar-toggler-right"
           type="button"
           data-toggle="collapse"
           data-target="#navbarResponsive"
@@ -17,7 +17,8 @@ const Navigation = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          Menu
+          <span>Menu </span>
+          <i class="fas fa-bars" />
         </button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav text-uppercase ml-auto">
