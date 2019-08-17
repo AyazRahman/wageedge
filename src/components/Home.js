@@ -83,6 +83,34 @@ const section = () => {
   );
 };
 
+const educationModule = () => {
+  return (
+    <section className="page-section">
+      <div className="container">
+        <div className="col-lg-12 text-center">
+          <h2 className="section-heading text-uppercase">Educational Module</h2>
+          <h3 className="section-subheading text-muted">Coming Soon ...</h3>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const visualization = () => {
+  return (
+    <section className="page-section">
+      <div className="container">
+        <div className="col-lg-12 text-center">
+          <h2 className="section-heading text-uppercase">
+            Visualization Tools
+          </h2>
+          <h3 className="section-subheading text-muted">Coming Soon ...</h3>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const footer = () => {
   return (
     <footer className="footer">
@@ -133,6 +161,8 @@ const Home = () => {
     <div>
       {header()}
       {section()}
+      {educationModule()}
+      {visualization()}
       {footer()}
     </div>
   );
