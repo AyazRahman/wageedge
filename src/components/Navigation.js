@@ -23,25 +23,17 @@ const Navigation = () => {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav text-uppercase ml-auto">
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#services">
-                Services
-              </a>
+              <Link className="nav-link js-scroll-trigger" to="/laws">
+                Laws
+              </Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#portfolio">
-                Portfolio
-              </a>
-            </li>
+
             <li className="nav-item">
               <Link className="nav-link js-scroll-trigger" to="/about">
                 About
               </Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#team">
-                Team
-              </a>
-            </li>
+
             <li className="nav-item">
               <a className="nav-link js-scroll-trigger" href="#contact">
                 Contact

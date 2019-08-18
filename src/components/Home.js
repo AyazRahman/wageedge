@@ -1,32 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-const imageURL = "img/header-bg.jpg";
-
-const header = () => {
-  return (
-    <header
-      className="masthead"
-      style={{ backgroundImage: `url(${imageURL})` }}
-    >
-      <div className="container">
-        <div className="intro-text">
-          <div className="intro-heading">Welcome To Wedge Edge</div>
-          <div className=" intro-lead-in">
-            The one place to find out your rights as an Australian Internation
-            student
-          </div>
-          <Link
-            className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-            to="/services"
-          >
-            Tell Me More
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-};
+import Header from "./Header";
 
 const section = () => {
   return (
@@ -111,59 +84,14 @@ const visualization = () => {
   );
 };
 
-const footer = () => {
-  return (
-    <footer className="footer">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-md-4">
-            <span className="copyright">
-              Copyright © Wedge Edge {new Date().getFullYear()}
-            </span>
-          </div>
-          <div className="col-md-4">
-            <ul className="list-inline social-buttons">
-              <li className="list-inline-item">
-                <a href="#">
-                  <i className="fab fa-twitter" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#">
-                  <i className="fab fa-facebook-f" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#">
-                  <i className="fab fa-linkedin-in" />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-md-4">
-            <ul className="list-inline quicklinks">
-              <li className="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
 const Home = () => {
+  const imageURL = "img/header-bg.jpg";
   return (
     <div>
-      {header()}
+      <Header image={imageURL} />
       {section()}
       {educationModule()}
       {visualization()}
-      {footer()}
     </div>
   );
 };
