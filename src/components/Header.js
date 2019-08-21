@@ -10,14 +10,14 @@ class Header extends Component {
       >
         <div className="container">
           <div className="intro-text">
-            <div className="intro-heading">Welcome To Wedge Edge</div>
+            <div className="intro-heading">Welcome To Wage Edge</div>
             <div className=" intro-lead-in">
-              The one place to find out your rights as an Australian Internation
-              student
+              The one place to find out your rights as an Australian
+              International student
             </div>
             <Link
               className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-              to="/services"
+              to="/laws"
             >
               Tell Me More
             </Link>

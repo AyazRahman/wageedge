@@ -6,7 +6,7 @@ const Navigation = () => {
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div className="container">
         <Link className="navbar-brand js-scroll-trigger" to="/">
-          Wedge Edge
+          Wage Edge
         </Link>
         <button
           className="navbar-toggler navbar-toggler-right"

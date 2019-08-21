@@ -164,7 +164,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: #fff;
-  background-image: url(../img/header-bg.jpg);
+
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -192,7 +192,7 @@ header.masthead .intro-text .intro-heading {
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
 }
-@media (min-width: 768px) {
+@media (min-width: 1920px) {
   header.masthead .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
