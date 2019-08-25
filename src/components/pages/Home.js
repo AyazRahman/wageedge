@@ -22,9 +22,11 @@ const section = () => {
             </span>
             <h4 className="service-heading">Australian minimum wage</h4>
             <p className="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
+              The Australian Government wants international students to have a
+              rewarding and enjoyable experience when they come to Australia to
+              study. Australia offers high quality education services and
+              protects the rights of international students to ensure you make
+              the most of your time here...<Link to="/minwage">Learn More</Link>
             </p>
           </div>
           <div className="col-md-6">
@@ -34,9 +36,12 @@ const section = () => {
             </span>
             <h4 className="service-heading">Work Rights</h4>
             <p className="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
+              Every employee has minimum rights and conditions at work that may
+              be set by a legal document like an award, an agreement, or a
+              contract of employment. Ask your employer which one applies to you
+              to find out how you are affected. If an award or agreement does
+              not apply, all employees in the...{" "}
+              <Link to="/workrights">Learn More</Link>
             </p>
           </div>
         </div>
