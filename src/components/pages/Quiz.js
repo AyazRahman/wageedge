@@ -9,7 +9,9 @@ class Quiz extends Component {
       questions: [],
       total: 0,
       active: "progress-bar-animated",
-      current: 0
+      current: 0,
+      showMessage: false,
+      message: null
     };
   }
 
@@ -26,7 +28,7 @@ class Quiz extends Component {
       question.options = element.answer_options
         .split("||")
         .map(item => item.trim());
-      question.answer = element.answer;
+      question.answer = element.correct_answer;
       question.correct_explanation = element.correct_explanation;
       question.wrong_explanation = element.wrong_explanation;
       question.answered = null;
@@ -42,12 +44,14 @@ class Quiz extends Component {
   };
 
   renderQuestion = () => {
-    console.log(this.state);
     if (this.state.questions.length !== 0) {
       //console.log(this.state.questions[this.state.current - 1]);
       return (
-        <div className="p-3 col-lg-12 text-muted">
-          <Question question={this.state.questions[this.state.current - 1]} />
+        <div className="col-lg-12 text-muted">
+          <Question
+            handleChange={this.handleAnswer}
+            question={this.state.questions[this.state.current - 1]}
+          />
         </div>
       );
     } else {
@@ -72,7 +76,8 @@ class Quiz extends Component {
       let active = "progress-bar-animated";
       this.setState({
         current: current,
-        active: active
+        active: active,
+        showMessage: false
       });
     }
   };
@@ -87,7 +92,8 @@ class Quiz extends Component {
       }
       this.setState({
         current: current,
-        active: active
+        active: active,
+        showMessage: false
       });
     }
   };
@@ -97,7 +103,31 @@ class Quiz extends Component {
       return value + "%";
     }
   };
+
+  showAnswer = question => {
+    let showMessage = this.state.showMessage;
+    if (!showMessage) showMessage = true;
+    if (question.answered !== null) {
+      if (question.answer === question.answered) {
+        this.setState({
+          message: question.correct_explanation,
+          showMessage: showMessage
+        });
+      } else {
+        this.setState({
+          message: question.wrong_explanation,
+          showMessage: showMessage
+        });
+      }
+    } else {
+      this.setState({
+        message: "Please Select an answer first",
+        showMessage: showMessage
+      });
+    }
+  };
   renderButtons = () => {
+    if (this.state.questions.length === 0) return;
     let prev = "btn btn-primary mx-3",
       next = "btn btn-primary mx-3";
     if (this.state.current === 1) {
@@ -111,12 +141,34 @@ class Quiz extends Component {
         <button className={prev} onClick={this.prevQuestion}>
           Prev
         </button>
-        <button className="btn btn-primary mx-3">Check Answer</button>
+        <button
+          className="btn btn-primary mx-3"
+          onClick={() =>
+            this.showAnswer(this.state.questions[this.state.current - 1])
+          }
+        >
+          Check Answer
+        </button>
         <button className={next} onClick={this.nextQuestion}>
           Next
         </button>
       </div>
     );
+  };
+
+  renderMessage = message => {
+    if (this.state.showMessage) {
+      return <div className="container col-12 text-muted">{message}</div>;
+    }
+  };
+
+  handleAnswer = question => {
+    console.log(question);
+    let questions = this.state.questions;
+    console.log(questions);
+    questions[this.state.current - 1] = question;
+    console.log(questions);
+    this.setState({ questions: questions });
   };
 
   render() {
@@ -146,6 +198,7 @@ class Quiz extends Component {
 
               {this.renderQuestion()}
               {this.renderButtons()}
+              {this.renderMessage(this.state.message)}
             </div>
           </div>
         </section>

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header";
+import { Link } from "react-router-dom";
 
 const section = () => {
   return (
@@ -14,7 +15,7 @@ const section = () => {
           </div>
         </div>
         <div className="row text-center">
-          <div className="col-md-4">
+          <div className="col-md-6">
             <span className="fa-stack fa-4x">
               <i className="fas fa-circle fa-stack-2x text-primary" />
               <i className="fas fa-gavel fa-stack-1x fa-inverse" />
@@ -26,30 +27,23 @@ const section = () => {
               impedit.
             </p>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-6">
             <span className="fa-stack fa-4x">
               <i className="fas fa-circle fa-stack-2x text-primary" />
               <i className="fas fa-landmark fa-stack-1x fa-inverse" />
             </span>
-            <h4 className="service-heading">International visa rights</h4>
+            <h4 className="service-heading">Work Rights</h4>
             <p className="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
               maxime quam architecto quo inventore harum ex magni, dicta
               impedit.
             </p>
           </div>
-          <div className="col-md-4">
-            <span className="fa-stack fa-4x">
-              <i className="fas fa-circle fa-stack-2x text-primary" />
-              <i className="fas fa-balance-scale fa-stack-1x fa-inverse" />
-            </span>
-            <h4 className="service-heading">Australian work rights</h4>
-            <p className="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
-            </p>
-          </div>
+        </div>
+        <div className="text-center pt-5">
+          <Link className="btn btn-primary btn-lg " to="/quiz">
+            Test Your Knowledge
+          </Link>
         </div>
       </div>
     </section>
