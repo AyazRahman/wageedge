@@ -17,7 +17,7 @@ class Header extends Component {
             </div>
             <Link
               className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-              to="/laws"
+              to="/workrights"
             >
               Tell Me More
             </Link>

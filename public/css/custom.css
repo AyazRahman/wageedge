@@ -96,6 +96,9 @@ img::-moz-selection {
 #mainNav {
   background-color: #212529;
 }
+#dropBar {
+  background-color: #212529;
+}
 #mainNav .navbar-toggler {
   font-size: 12px;
   right: 0;
@@ -120,7 +123,16 @@ img::-moz-selection {
 #mainNav .navbar-brand:hover {
   color: #fec503;
 }
-#mainNav .navbar-nav .nav-item .nav-link {
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.menu:hover > .navbarResponsive {
+  display: block;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link .dropdown-item {
   font-size: 90%;
   font-weight: 400;
   padding: 0.75em 0;
@@ -130,8 +142,8 @@ img::-moz-selection {
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
 }
-#mainNav .navbar-nav .nav-item .nav-link.active,
-#mainNav .navbar-nav .nav-item .nav-link:hover {
+#mainNav .navbar-nav .nav-item .nav-link.active .dropdown-item,
+#mainNav .navbar-nav .nav-item .nav-link:hover .dropdown-item:hover {
   color: #fed136;
 }
 @media (min-width: 992px) {

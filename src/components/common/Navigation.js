@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav
+      className="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink"
+      id="mainNav"
+    >
       <div className="container">
         <Link className="navbar-brand js-scroll-trigger" to="/">
           Wage Edge
@@ -22,10 +25,26 @@ const Navigation = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav text-uppercase ml-auto">
-            <li className="nav-item">
-              <Link className="nav-link js-scroll-trigger" to="/laws">
+            <li className="nav-item dropdown">
+              <Link className="nav-link dropdown-toggle" to="#">
                 Laws
               </Link>
+              <div
+                className="dropdown-menu"
+                id="dropBar"
+                style={{ marginTop: 0 }}
+              >
+                <div className="pl-3 nav-item">
+                  <Link className="nav-link js-scroll-trigger" to="/minwage">
+                    Minimum Wage
+                  </Link>
+                </div>
+                <div className="pl-3 nav-item">
+                  <Link className="nav-link js-scroll-trigger" to="/workrights">
+                    Work Rights
+                  </Link>
+                </div>
+              </div>
             </li>
 
             <li className="nav-item">
@@ -35,9 +54,9 @@ const Navigation = () => {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#contact">
+              <Link className="nav-link js-scroll-trigger" to="#contact">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

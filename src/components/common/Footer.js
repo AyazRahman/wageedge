@@ -13,17 +13,17 @@ const Footer = () => {
           <div className="col-md-4">
             <ul className="list-inline social-buttons">
               <li className="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-twitter" />
                 </a>
               </li>
               <li className="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-facebook-f" />
                 </a>
               </li>
               <li className="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-linkedin-in" />
                 </a>
               </li>
@@ -32,10 +32,10 @@ const Footer = () => {
           <div className="col-md-4">
             <ul className="list-inline quicklinks">
               <li className="list-inline-item">
-                <a href="#">Privacy Policy</a>
+                <a href="/">Privacy Policy</a>
               </li>
               <li className="list-inline-item">
-                <a href="#">Terms of Use</a>
+                <a href="/">Terms of Use</a>
               </li>
             </ul>
           </div>
