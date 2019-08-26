@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="row align-items-center">
           <div className="col-md-4">
             <span className="copyright">
-              Copyright © Wedge Edge {new Date().getFullYear()}
+              Copyright © Wage Edge {new Date().getFullYear()}
             </span>
           </div>
           <div className="col-md-4">

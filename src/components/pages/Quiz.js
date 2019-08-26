@@ -115,7 +115,7 @@ class Quiz extends Component {
         });
       } else {
         this.setState({
-          message: question.wrong_explanation,
+          message: question.correct_explanation,
           showMessage: showMessage
         });
       }
@@ -157,8 +157,30 @@ class Quiz extends Component {
   };
 
   renderMessage = message => {
+    let question = this.state.questions[this.state.current - 1];
+
     if (this.state.showMessage) {
-      return <div className="container col-12 text-muted">{message}</div>;
+      if (question.answered === null) {
+        return <div className="container col-12 text-muted">{message}</div>;
+      } else if (question.answer === question.answered) {
+        return (
+          <React.Fragment>
+            <div class="alert alert-success" role="alert">
+              <strong>Well done!</strong>
+            </div>
+            <div className="container col-12 text-muted">{message}</div>
+          </React.Fragment>
+        );
+      } else {
+        return (
+          <React.Fragment>
+            <div class="alert alert-danger" role="alert">
+              <strong>That's incorrect</strong>
+            </div>
+            <div className="container col-12 text-muted">{message}</div>
+          </React.Fragment>
+        );
+      }
     }
   };
 
@@ -175,7 +197,7 @@ class Quiz extends Component {
     let barStyle = `bg-warning progress-bar progress-bar-striped ${
       this.state.active
     }`;
-    let currentValue = `${(this.state.current * 100) / this.state.total}`;
+    let currentValue = `${~~((this.state.current * 100) / this.state.total)}`;
     return (
       <React.Fragment>
         <section className="page-section">
