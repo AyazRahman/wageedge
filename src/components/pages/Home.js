@@ -47,7 +47,7 @@ const section = () => {
         </div>
         <div className="text-center pt-5">
           <Link className="btn btn-primary btn-lg " to="/quiz">
-            Test Your Knowledge
+            Test Your Knowledge About Work Rights
           </Link>
         </div>
       </div>

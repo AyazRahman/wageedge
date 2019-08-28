@@ -24,7 +24,7 @@ const Navigation = () => {
           <i className="fas fa-bars" />
         </button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
-          <ul className="navbar-nav text-uppercase ml-auto">
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item dropdown">
               <Link className="nav-link dropdown-toggle" to="#">
                 Laws

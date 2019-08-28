@@ -18,7 +18,7 @@ const About = () => {
               </h3>
             </div>
           </div>
-          <div className="row ">TBD</div>
+          <div className="row " />
         </div>
       </section>
     </React.Fragment>

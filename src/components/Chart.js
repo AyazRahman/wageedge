@@ -13,7 +13,7 @@ class Chart extends Component {
           {
             label: "Wage in AUD",
             data: [19.71, 20, 20.12, 22.24, 20, 25, 23.3, 22.1, 21, 20],
-            backgroundColor: "rgba(54, 162, 235, 0.6)"
+            backgroundColor: "rgba(254,209,54, 0.8)"
           }
         ]
       },
@@ -23,7 +23,7 @@ class Chart extends Component {
           text: "Minimum Wages by Industry",
           fontSize: 20
         },
-        legend: { display: true, position: "right" }
+        legend: { display: true, position: "top" }
       }
     };
   }

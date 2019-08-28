@@ -5,12 +5,20 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-md-4">
+          <div className="col-md-12">
             <span className="copyright">
               Copyright © Wage Edge {new Date().getFullYear()}
             </span>
           </div>
-          <div className="col-md-4">
+        </div>
+      </div>
+    </footer>
+  );
+};
+export default Footer;
+
+/* 
+<div className="col-md-4">
             <ul className="list-inline social-buttons">
               <li className="list-inline-item">
                 <a href="/">
@@ -38,10 +46,6 @@ const Footer = () => {
                 <a href="/">Terms of Use</a>
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
-export default Footer;
+          </div> 
+
+*/

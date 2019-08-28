@@ -24,6 +24,17 @@ const Minwage = () => {
                 </h3>
                 <h3 className="section-heading text-center">Minimum Wage</h3>
                 <p>
+                  The national minimum wage is currently $19.49 per hour or
+                  $740.80 per 38 hour week (before tax). Casual employees
+                  covered by the national minimum wage also get at least a 25%
+                  casual loading. A minimum wage is an employee’s base rate of
+                  pay for ordinary hours worked. It is generally dependent on
+                  the industrial instrument that applies to their employment.
+                  For example, a modern award or registered agreement. Employers
+                  and employees cannot be paid less than their applicable
+                  minimum wage, even if they agree to it.
+                </p>
+                <p>
                   Under Commonwealth workplace laws, no employee over the age of
                   21 in the national workplace relations system can be paid less
                   than the minimum wage. The national minimum wage order is
