@@ -52,12 +52,6 @@ const Navigation = () => {
                 About
               </Link>
             </li>
-
-            <li className="nav-item">
-              <Link className="nav-link js-scroll-trigger" to="#contact">
-                Contact
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
@@ -66,3 +60,11 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+/*
+<li className="nav-item">
+              <Link className="nav-link js-scroll-trigger" to="#contact">
+                Contact
+              </Link>
+            </li>
+*/

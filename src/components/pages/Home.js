@@ -8,7 +8,7 @@ const section = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12 text-center">
-            <h2 className="section-heading text-uppercase">Legal Rights</h2>
+            <h2 className="section-heading">Legal Rights</h2>
             <h3 className="section-subheading text-muted">
               The Legal Rights that you should be aware of.
             </h3>
@@ -60,7 +60,7 @@ const educationModule = () => {
     <section className="page-section">
       <div className="container">
         <div className="col-lg-12 text-center">
-          <h2 className="section-heading text-uppercase">Educational Module</h2>
+          <h2 className="section-heading">Educational Module</h2>
           <h3 className="section-subheading text-muted">Coming Soon ...</h3>
         </div>
       </div>
@@ -73,9 +73,7 @@ const visualization = () => {
     <section className="page-section">
       <div className="container">
         <div className="col-lg-12 text-center">
-          <h2 className="section-heading text-uppercase">
-            Visualization Tools
-          </h2>
+          <h2 className="section-heading">Visualization Tools</h2>
           <h3 className="section-subheading text-muted">Coming Soon ...</h3>
         </div>
       </div>
@@ -89,8 +87,6 @@ const Home = () => {
     <div>
       <Header image={imageURL} />
       {section()}
-      {educationModule()}
-      {visualization()}
     </div>
   );
 };

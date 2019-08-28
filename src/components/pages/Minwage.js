@@ -11,8 +11,8 @@ const Minwage = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h2 className="section-heading text-center text-uppercase">
-                Min Wage in Australia
+              <h2 className="section-heading text-center">
+                Minimum Wage in Australia
               </h2>
               <div className="text-muted">
                 <h3 className="section-subheading">

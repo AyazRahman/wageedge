@@ -741,9 +741,7 @@ const Workrights = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h2 className="section-heading text-uppercase text-center">
-                Work Rights
-              </h2>
+              <h2 className="section-heading text-center">Work Rights</h2>
               <h3 className="section-subheading text-muted">
                 Every employee has minimum rights and conditions at work that
                 may be set by a legal document like an award, an agreement, or a

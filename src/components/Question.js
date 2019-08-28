@@ -15,7 +15,7 @@ class Question extends Component {
   renderOption = items => {
     return items.map(item => {
       return (
-        <div key={item} className="p-1 ml-3 container">
+        <div key={item} className="p-1 ml-3 col-lg-12">
           <input
             className="mr-2"
             type="radio"
@@ -41,7 +41,8 @@ class Question extends Component {
     return (
       <div className="row p-3">
         <p>{this.state.question.title}</p>
-        <div className="row" onChange={this.handleChange}>
+
+        <div className="row col-lg-12" onChange={this.handleChange}>
           {this.renderOption(this.state.question.options)}
         </div>
       </div>
