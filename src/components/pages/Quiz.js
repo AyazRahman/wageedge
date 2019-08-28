@@ -45,7 +45,6 @@ class Quiz extends Component {
 
   renderQuestion = () => {
     if (this.state.questions.length !== 0) {
-      //console.log(this.state.questions[this.state.current - 1]);
       return (
         <div className="col-lg-12 text-muted">
           <Question
@@ -165,7 +164,7 @@ class Quiz extends Component {
       } else if (question.answer === question.answered) {
         return (
           <React.Fragment>
-            <div class="alert alert-success" role="alert">
+            <div className="alert alert-success" role="alert">
               <strong>Well done!</strong>
             </div>
             <div className="container col-12 text-muted">{message}</div>
@@ -185,11 +184,10 @@ class Quiz extends Component {
   };
 
   handleAnswer = question => {
-    console.log(question);
     let questions = this.state.questions;
-    console.log(questions);
+
     questions[this.state.current - 1] = question;
-    console.log(questions);
+
     this.setState({ questions: questions });
   };
 
