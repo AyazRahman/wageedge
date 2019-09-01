@@ -25,26 +25,28 @@ const Navigation = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="#">
-                Laws
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Home
               </Link>
-              <div
-                className="dropdown-menu"
-                id="dropBar"
-                style={{ marginTop: 0 }}
-              >
-                <div className="pl-3 nav-item">
-                  <Link className="nav-link js-scroll-trigger" to="/minwage">
-                    Minimum Wage
-                  </Link>
-                </div>
-                <div className="pl-3 nav-item">
-                  <Link className="nav-link js-scroll-trigger" to="/workrights">
-                    Work Rights
-                  </Link>
-                </div>
-              </div>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/minwage">
+                Minimum Wage
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/minwage">
+                Work Rights
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/minwage">
+                Quiz
+              </Link>
             </li>
 
             <li className="nav-item">
@@ -68,3 +70,26 @@ export default Navigation;
               </Link>
             </li>
 */
+
+/*<li className="nav-item dropdown">
+              <Link className="nav-link dropdown-toggle" to="#">
+                Laws
+              </Link>
+              <div
+                className="dropdown-menu"
+                id="dropBar"
+                style={{ marginTop: 0 }}
+              >
+                <div className="pl-3 nav-item">
+                  <Link className="nav-link js-scroll-trigger" to="/minwage">
+                    Minimum Wage
+                  </Link>
+                </div>
+                <div className="pl-3 nav-item">
+                  <Link className="nav-link js-scroll-trigger" to="/workrights">
+                    Work Rights
+                  </Link>
+                </div>
+              </div>
+            </li>
+            */
