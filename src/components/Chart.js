@@ -11,19 +11,36 @@ class Chart extends Component {
         labels: null,
         datasets: [
           {
-            label: "Wage in AUD",
             data: [19.71, 20, 20.12, 22.24, 20, 25, 23.3, 22.1, 21, 20],
             backgroundColor: "rgba(254,209,54, 0.8)"
           }
         ]
       },
       options: {
+        legend: { display: false },
+        scales: {
+          xAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: "Industries"
+              }
+            }
+          ],
+          yAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: "Wage per hour in AUD"
+              }
+            }
+          ]
+        },
         title: {
           display: true,
           text: "Minimum Wages by Industry",
           fontSize: 20
-        },
-        legend: { display: true, position: "top" }
+        }
       }
     };
   }

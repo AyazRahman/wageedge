@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
 
 import history from "../history";
 import Navigation from "./common/Navigation";
@@ -18,7 +18,11 @@ const App = () => {
         <div>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/workrights" exact component={Workrights} />
+
+            <Route path="/workrights/:id" exact component={Workrights} />
+            <Route path="/workights">
+              <Redirect to="/workrights/1"></Redirect>
+            </Route>
             <Route path="/quiz" exact component={Quiz} />
             <Route path="/minwage" exact component={Minwage} />
             <Route path="/about" exact component={About} />

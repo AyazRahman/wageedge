@@ -38,13 +38,13 @@ const Navigation = () => {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/minwage">
+              <Link className="nav-link" to="/workrights/0">
                 Work Rights
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/minwage">
+              <Link className="nav-link" to="/quiz">
                 Quiz
               </Link>
             </li>

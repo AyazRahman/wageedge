@@ -11,80 +11,156 @@ const section = () => {
             <h2 className="section-heading">Work Rights</h2>
           </div>
         </div>
+
         <div className="row text-center mt-5">
-          <div className="col-md-3 col-sm-6 p-3">
-            <span className="fa-stack fa-2x">
-              <i className="fas fa-circle fa-stack-2x text-primary" />
-              <i className="fas fa-clock fa-stack-1x fa-inverse" />
-            </span>
-            <h6 className="service-heading">Work Restrictions</h6>
-          </div>
-          <div className="col-md-3 col-sm-6 p-3">
-            <div>
-              <span className="fa-stack fa-2x ">
-                <i className="fas fa-circle fa-stack-2x text-primary" />
-                <i className="fas fa-user-friends fa-stack-1x fa-inverse" />
-              </span>
-              <h6 className="service-heading">Volunteer Work</h6>
+          <div className="col-md-3 col-sm-6 my-2">
+            <div className="p-2 shadow-lg bg-white rounded">
+              <Link to="/workrights/0">
+                <span className="fa-stack fa-2x">
+                  <i className="fas fa-circle fa-stack-2x text-primary" />
+                  <i className="fas fa-clock fa-stack-1x fa-inverse" />
+                </span>
+                <h6 className="service-heading text-dark">Work Restrictions</h6>
+              </Link>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6 p-3">
-            <div>
-              <span className="fa-stack fa-2x ">
-                <i className="fas fa-circle fa-stack-2x text-primary" />
-                <i className="fas fa-dollar-sign fa-stack-1x fa-inverse" />
-              </span>
-              <h6 className="service-heading">Pay in Cash</h6>
+          <div className="col-md-3 col-sm-6 my-2">
+            <div className="p-2 shadow-lg bg-white rounded">
+              <Link to="/workrights/1">
+                <span className="fa-stack fa-2x ">
+                  <i className="fas fa-circle fa-stack-2x text-primary" />
+                  <i className="fas fa-user-friends fa-stack-1x fa-inverse" />
+                </span>
+                <h6 className="service-heading text-dark">Volunteer Work</h6>
+              </Link>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6 p-3">
-            <div>
-              <span className="fa-stack fa-2x ">
-                <i className="fas fa-circle fa-stack-2x text-primary" />
-                <i className="fas fa-minus fa-stack-1x fa-inverse" />
-              </span>
-              <h6 className="service-heading">Deduct money from wage</h6>
+          <div className="col-md-3 col-sm-6 my-2">
+            <div className=" p-2 shadow-lg bg-white rounded">
+              <Link to="/workrights/2">
+                <span className="fa-stack fa-2x ">
+                  <i className="fas fa-circle fa-stack-2x text-primary" />
+                  <i className="fas fa-dollar-sign fa-stack-1x fa-inverse" />
+                </span>
+                <h6 className="service-heading text-dark">Pay in Cash</h6>
+              </Link>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6 p-3">
-            <span className="fa-stack fa-2x">
-              <i className="fas fa-circle fa-stack-2x text-primary" />
-              <i className="fas fa-gavel fa-stack-1x fa-inverse" />
-            </span>
-            <h6 className="service-heading">Workplace descrimination</h6>
-          </div>
-          <div className="col-md-3 col-sm-6 p-3">
-            <div>
-              <span className="fa-stack fa-2x ">
-                <i className="fas fa-circle fa-stack-2x text-primary" />
-                <i className="fas fa-book-open fa-stack-1x fa-inverse" />
-              </span>
-              <h6 className="service-heading">Employment Type</h6>
+          <div className="col-md-3 col-sm-6 my-2">
+            <div className="p-2 shadow-lg bg-white rounded">
+              <Link to="/workrights/3">
+                <span className="fa-stack fa-2x ">
+                  <i className="fas fa-circle fa-stack-2x text-primary" />
+                  <i className="fas fa-minus fa-stack-1x fa-inverse" />
+                </span>
+                <h6 className="service-heading text-dark">
+                  Deduct money from wage
+                </h6>
+              </Link>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6 p-3">
-            <div>
-              <span className="fa-stack fa-2x ">
-                <i className="fas fa-circle fa-stack-2x text-primary" />
-                <i className="fas fa-running fa-stack-1x fa-inverse" />
-              </span>
-              <h6 className="service-heading">Leaves and Entitlement</h6>
+          <div className="col-md-3 col-sm-6 my-2">
+            <div className="p-2 shadow-lg bg-white rounded">
+              <Link to="/workrights/4">
+                <span className="fa-stack fa-2x">
+                  <i className="fas fa-circle fa-stack-2x text-primary" />
+                  <i className="fas fa-gavel fa-stack-1x fa-inverse" />
+                </span>
+                <h6 className="service-heading text-dark">
+                  Workplace descrimination
+                </h6>
+              </Link>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6 p-3">
-            <div>
-              <span className="fa-stack fa-2x ">
-                <i className="fas fa-circle fa-stack-2x text-primary" />
-                <i className="fas fa-infinity fa-stack-1x fa-inverse" />
-              </span>
-              <h6 className="service-heading">Flexible Working Arrangements</h6>
+          <div className="col-md-3 col-sm-6 my-2">
+            <div className="p-2 shadow-lg bg-white rounded">
+              <Link to="/workrights/5">
+                <span className="fa-stack fa-2x ">
+                  <i className="fas fa-circle fa-stack-2x text-primary" />
+                  <i className="fas fa-book-open fa-stack-1x fa-inverse" />
+                </span>
+                <h6 className="service-heading text-dark">Employment Type</h6>
+              </Link>
+            </div>
+          </div>
+
+          <div className="col-md-3 col-sm-6 my-2">
+            <div className="p-2 shadow-lg bg-white rounded">
+              <Link to="/workrights/6">
+                <span className="fa-stack fa-2x ">
+                  <i className="fas fa-circle fa-stack-2x text-primary" />
+                  <i className="fas fa-running fa-stack-1x fa-inverse" />
+                </span>
+                <h6 className="service-heading text-dark">
+                  Leaves and Entitlement
+                </h6>
+              </Link>
+            </div>
+          </div>
+          <div className="col-md-3 col-sm-6 my-2">
+            <div className="p-2 shadow-lg bg-white rounded">
+              <Link to="/workrights/7">
+                <span className="fa-stack fa-2x ">
+                  <i className="fas fa-circle fa-stack-2x text-primary" />
+                  <i className="fas fa-infinity fa-stack-1x fa-inverse" />
+                </span>
+                <h6 className="service-heading text-dark">
+                  Working Arrangements
+                </h6>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="text-center pt-5">
-          <Link className="btn btn-primary btn-lg " to="/quiz">
-            Test Your Knowledge About Work Rights
-          </Link>
+      </div>
+    </section>
+  );
+};
+
+const minwage = () => {
+  return (
+    <section className="page-section">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <h3>Australian Part-time Minimum Wage</h3>
+            <p style={{ fontSize: 20 }} className="mt-5">
+              The national minimum wage is currently <b>$19.49</b> per hour or
+              $740.80 per 38 hour week (before tax).
+            </p>
+            <Link to="/minwage">
+              <button className="btn btn-primary btn-lg">Learn More</button>
+            </Link>
+          </div>
+          <div className="col-md-6">
+            <img
+              src="img/minimum-wage-cartoon.jpg"
+              alt="minimum-wage"
+              className="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const about = () => {
+  return (
+    <section className="page-section">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <img className="img-fluid" src="img/about-us.jpg" alt="about us" />
+          </div>
+          <div className="col-md-6">
+            <h2>About us</h2>
+            <p className="mt-3">
+              We aim to help international students to figure out the minimum
+              wages they should get, improve their awareness of fair work
+              rights, and also make them aware of the legal rights they have as
+              an international student in Australia.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -123,6 +199,8 @@ const Home = () => {
     <div>
       <Header image={imageURL} />
       {section()}
+      {minwage()}
+      {about()}
     </div>
   );
 };
