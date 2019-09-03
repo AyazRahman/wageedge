@@ -128,7 +128,9 @@ const minwage = () => {
               $740.80 per 38 hour week (before tax).
             </p>
             <Link to="/minwage">
-              <button className="btn btn-primary btn-lg">Learn More</button>
+              <button className="btn btn-primary btn-lg mt-3">
+                Learn More
+              </button>
             </Link>
           </div>
           <div className="col-md-6">

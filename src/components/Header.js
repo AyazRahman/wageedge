@@ -12,12 +12,12 @@ class Header extends Component {
           <div className="intro-text">
             <div className="intro-heading">Welcome To Wage Edge</div>
             <div className=" intro-lead-in">
-              Do you know your work rights as an international student in
-              Australia?
+              Do you know your work rights in Australia as an international
+              student ?
             </div>
             <Link
               className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-              to="/workrights"
+              to="/quiz"
             >
               Test your knowledge
             </Link>

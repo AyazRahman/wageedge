@@ -48,12 +48,6 @@ const Navigation = () => {
                 Quiz
               </Link>
             </li>
-
-            <li className="nav-item">
-              <Link className="nav-link js-scroll-trigger" to="/about">
-                About
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
