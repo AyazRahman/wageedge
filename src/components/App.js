@@ -6,6 +6,7 @@ import Navigation from "./common/Navigation";
 import Home from "./pages/Home";
 import Footer from "./common/Footer";
 import Workrights from "./pages/Workrights";
+//import Workrightsn from "./pages/Workrights";
 import Minwage from "./pages/Minwage";
 import Quiz from "./pages/Quiz";
 import About from "./pages/About";
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/workights">
               <Redirect to="/workrights/1"></Redirect>
             </Route>
+
             <Route path="/quiz" exact component={Quiz} />
             <Route path="/minwage" exact component={Minwage} />
             <Route path="/about" exact component={About} />
