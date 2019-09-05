@@ -132,7 +132,7 @@ class Workrights extends Component {
           <div className="row page-section" style={{ fontSize: 20 }}>
             <div className="col-lg-12">
               It is <b>acceptable</b> for your employer to pay you in cash as
-              long as
+              long as{" "}
               <b>
                 tax has been taken from your earnings and sent to the Australian
                 Taxation Office (ATO).
