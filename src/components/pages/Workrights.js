@@ -19,14 +19,20 @@ class Workrights extends Component {
     this.state = { id: parseInt(this.props.match.params.id) };
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params.id !== prevProps.match.params.id) {
+      this.setState({ id: parseInt(this.props.match.params.id) });
+    }
+  }
+
   renderOptions = id => {
     let optionLeft = (pageOptions.length + id - 1) % pageOptions.length;
     let optionRight = (pageOptions.length + id + 1) % pageOptions.length;
     return (
       <div className="row">
         <div className="col-4 text-left">
-          <a
-            href="#"
+          <Link
+            to={`/workrights/${optionLeft}`}
             onClick={() => {
               this.setState({ id: optionLeft });
             }}
@@ -35,7 +41,7 @@ class Workrights extends Component {
               <i className={`fas fa-caret-left fa-3x`} />
             </span>
             <p className="text-dark">{pageOptions[optionLeft].title}</p>
-          </a>
+          </Link>
         </div>
         <div className="col-4 text-center">
           <span className="fa-stack fa-2x ">
@@ -47,8 +53,8 @@ class Workrights extends Component {
           <h6 className="mt-3">{pageOptions[id].title}</h6>
         </div>
         <div className="col-4 text-right">
-          <a
-            href="#"
+          <Link
+            to={`/workrights/${optionRight}`}
             onClick={() => {
               this.setState({ id: optionRight });
             }}
@@ -57,7 +63,7 @@ class Workrights extends Component {
               <i className={`fas fa-caret-right fa-3x`} />
             </span>
             <p className="text-dark">{pageOptions[optionRight].title}</p>
-          </a>
+          </Link>
         </div>
       </div>
     );

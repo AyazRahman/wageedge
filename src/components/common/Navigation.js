@@ -37,10 +37,80 @@ const Navigation = () => {
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/workrights/0">
-                Work Rights
+            <li className="nav-item dropdown">
+              <Link className="nav-link dropdown-toggle" to="#">
+                Workrights
               </Link>
+              <div
+                className="dropdown-menu"
+                id="dropBar"
+                style={{ marginTop: 0 }}
+              >
+                <div className="pl-3 nav-item">
+                  <Link
+                    className="nav-link js-scroll-trigger"
+                    to="/workrights/0"
+                  >
+                    Work Restrictions
+                  </Link>
+                </div>
+                <div className="pl-3 nav-item">
+                  <Link
+                    className="nav-link js-scroll-trigger"
+                    to="/workrights/1"
+                  >
+                    Volunteer Work
+                  </Link>
+                </div>
+                <div className="pl-3 nav-item">
+                  <Link
+                    className="nav-link js-scroll-trigger"
+                    to="/workrights/2"
+                  >
+                    Pay in Cash
+                  </Link>
+                </div>
+                <div className="pl-3 nav-item">
+                  <Link
+                    className="nav-link js-scroll-trigger"
+                    to="/workrights/3"
+                  >
+                    Deduct money from wage
+                  </Link>
+                </div>
+                <div className="pl-3 nav-item">
+                  <Link
+                    className="nav-link js-scroll-trigger"
+                    to="/workrights/4"
+                  >
+                    Workplace descrimination
+                  </Link>
+                </div>
+                <div className="pl-3 nav-item">
+                  <Link
+                    className="nav-link js-scroll-trigger"
+                    to="/workrights/5"
+                  >
+                    Employment Type
+                  </Link>
+                </div>
+                <div className="pl-3 nav-item">
+                  <Link
+                    className="nav-link js-scroll-trigger"
+                    to="/workrights/6"
+                  >
+                    Leaves and Entitlement
+                  </Link>
+                </div>
+                <div className="pl-3 nav-item">
+                  <Link
+                    className="nav-link js-scroll-trigger"
+                    to="/workrights/7"
+                  >
+                    Working Arrangements
+                  </Link>
+                </div>
+              </div>
             </li>
 
             <li className="nav-item">
