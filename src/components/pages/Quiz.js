@@ -173,7 +173,7 @@ class Quiz extends Component {
       } else {
         return (
           <React.Fragment>
-            <div class="alert alert-danger" role="alert">
+            <div className="alert alert-danger" role="alert">
               <strong>That's incorrect</strong>
             </div>
             <div className="container col-12 text-muted">{message}</div>
@@ -192,9 +192,7 @@ class Quiz extends Component {
   };
 
   render() {
-    let barStyle = `bg-warning progress-bar progress-bar-striped ${
-      this.state.active
-    }`;
+    let barStyle = `bg-warning progress-bar progress-bar-striped ${this.state.active}`;
     let currentValue = `${~~((this.state.current * 100) / this.state.total)}`;
     return (
       <React.Fragment>

@@ -15,16 +15,21 @@ class Question extends Component {
   renderOption = items => {
     return items.map(item => {
       return (
-        <div key={item} className="p-1 ml-3 col-lg-12">
-          <input
-            className="mr-2"
-            type="radio"
-            value={item}
-            defaultChecked={item === this.state.question.answered}
-            name="option"
-          />
-          {item}
-          <br />
+        <div key={item} className="p-1 col-md-6">
+          <label
+            className={`card btn ${
+              item === this.state.question.answered ? "btn-quiz" : "btn-primary"
+            }`}
+          >
+            <input
+              className="mr-2"
+              type="radio"
+              value={item}
+              name="option"
+              autoComplete="off"
+            />
+            {item}
+          </label>
         </div>
       );
     });
@@ -42,7 +47,7 @@ class Question extends Component {
       <div className="row p-3">
         <p>{this.state.question.title}</p>
 
-        <div className="row col-lg-12" onChange={this.handleChange}>
+        <div className="row col-lg-12 text-center" onChange={this.handleChange}>
           {this.renderOption(this.state.question.options)}
         </div>
       </div>

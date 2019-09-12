@@ -14,7 +14,7 @@ const section = () => {
 
         <div className="row text-center mt-5">
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded">
+            <div className="p-2 shadow-lg bg-white rounded h-100">
               <Link to="/workrights/0">
                 <span className="fa-stack fa-2x">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
@@ -25,7 +25,7 @@ const section = () => {
             </div>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded">
+            <div className="p-2 shadow-lg bg-white rounded h-100">
               <Link to="/workrights/1">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
@@ -36,7 +36,7 @@ const section = () => {
             </div>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className=" p-2 shadow-lg bg-white rounded">
+            <div className=" p-2 shadow-lg bg-white rounded h-100">
               <Link to="/workrights/2">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
@@ -47,7 +47,7 @@ const section = () => {
             </div>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded">
+            <div className="p-2 shadow-lg bg-white rounded h-100">
               <Link to="/workrights/3">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
@@ -60,7 +60,7 @@ const section = () => {
             </div>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded">
+            <div className="p-2 shadow-lg bg-white rounded h-100">
               <Link to="/workrights/4">
                 <span className="fa-stack fa-2x">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
@@ -73,7 +73,7 @@ const section = () => {
             </div>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded">
+            <div className="p-2 shadow-lg bg-white rounded h-100">
               <Link to="/workrights/5">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
@@ -85,7 +85,7 @@ const section = () => {
           </div>
 
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded">
+            <div className="p-2 shadow-lg bg-white rounded h-100">
               <Link to="/workrights/6">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
@@ -98,7 +98,7 @@ const section = () => {
             </div>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded">
+            <div className="p-2 shadow-lg bg-white rounded h-100">
               <Link to="/workrights/7">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
