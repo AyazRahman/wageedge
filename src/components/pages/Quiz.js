@@ -17,6 +17,7 @@ class Quiz extends Component {
 
   componentDidMount() {
     this.getQuestions();
+    //addthis.layers.refresh();
   }
 
   getQuestions = async () => {
@@ -38,8 +39,7 @@ class Quiz extends Component {
 
     this.setState({
       questions: this.state.questions,
-      total: this.state.questions.length,
-      current: 1
+      total: this.state.questions.length
     });
   };
 
@@ -69,7 +69,6 @@ class Quiz extends Component {
   };
   prevQuestion = () => {
     let current = this.state.current;
-    //let total = this.state.total
     if (current > 1) {
       current--;
       let active = "progress-bar-animated";
@@ -83,10 +82,10 @@ class Quiz extends Component {
   nextQuestion = () => {
     let current = this.state.current;
     let total = this.state.total;
-    if (current < total) {
+    if (current < total + 1) {
       current++;
       let active = "progress-bar-animated";
-      if (current === total) {
+      if (current === total + 1) {
         active = "";
       }
       this.setState({
@@ -132,9 +131,9 @@ class Quiz extends Component {
     if (this.state.current === 1) {
       prev = `${prev} d-none`;
     }
-    if (this.state.current === this.state.total) {
+    /*if (this.state.current === this.state.total) {
       next = `${next} d-none`;
-    }
+    }*/
     return (
       <div className="container col-12 py-3 text-center">
         <button className={prev} onClick={this.prevQuestion}>
@@ -191,33 +190,147 @@ class Quiz extends Component {
     this.setState({ questions: questions });
   };
 
-  render() {
+  renderContent = id => {
     let barStyle = `bg-warning progress-bar progress-bar-striped ${this.state.active}`;
-    let currentValue = `${~~((this.state.current * 100) / this.state.total)}`;
+    let currentValue = `${~~(
+      ((this.state.current - 1) * 100) /
+      this.state.total
+    )}`;
+
+    switch (id) {
+      case 0:
+        return this.renderWelcome();
+
+      default:
+        return (
+          <React.Fragment>
+            <div className="p-3 col-lg-12">
+              <div className="progress">
+                <div
+                  className={barStyle}
+                  role="progressbar"
+                  aria-valuenow={currentValue}
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style={{ width: currentValue + "%" }}
+                >
+                  {this.showPercentage(currentValue)}
+                </div>
+              </div>
+            </div>
+
+            {this.renderBody(this.state.current)}
+          </React.Fragment>
+        );
+    }
+  };
+
+  renderBody = id => {
+    if (id === this.state.total + 1) {
+      return <React.Fragment>{this.renderReview()}</React.Fragment>;
+    } else {
+      return (
+        <React.Fragment>
+          {this.renderQuestion()}
+          {this.renderButtons()}
+          {this.renderMessage(this.state.message)}
+        </React.Fragment>
+      );
+    }
+  };
+
+  renderReview = () => {
+    let {
+      yourScore,
+      totalScore,
+      correctQuestions,
+      totalQuestions
+    } = this.calculateInfo();
+    setTimeout(() => {
+      var addthisScript = document.createElement("script");
+      addthisScript.setAttribute(
+        "src",
+        "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d765179055d2125"
+      );
+      if (document.body) document.body.appendChild(addthisScript);
+    });
+    return (
+      <React.Fragment>
+        <div className="col-lg-12 text-center">
+          <h2>Congratulations</h2>
+        </div>
+        <div className="row col-lg-12 my-3">
+          <div className="col-md-6">
+            <h4>Quiz Review:</h4>
+            <p>Your Score: {yourScore}</p>
+            <p>Total Score: {totalScore}</p>
+            <p>Correct Questions: {correctQuestions}</p>
+            <p>Total Questions: {totalQuestions}</p>
+            <p>Accuracy: {yourScore}%</p>
+          </div>
+          <div className="col-md-6 text-center">
+            <p>Share with your friends</p>
+
+            <div
+              className="addthis_inline_share_toolbox"
+              data-url="https://www.wageedge.tk/#/quiz"
+            ></div>
+          </div>
+        </div>
+        <div className="col-lg-12">
+          <h4>Question review section</h4>
+          {this.state.questions.map(question => {
+            return (
+              <div key={question.id} className="my-4">
+                <p>{question.title}</p>
+                <p>Your answer: {question.answered}</p>
+                <p>Correct answer: {question.answer}</p>
+              </div>
+            );
+          })}
+        </div>
+      </React.Fragment>
+    );
+  };
+  calculateInfo = () => {
+    const totalScore = 100;
+    const totalQuestions = this.state.total;
+    let correctQuestions = 0;
+    this.state.questions.forEach(question => {
+      if (question.answer === question.answered) correctQuestions++;
+    });
+    const yourScore = ~~((correctQuestions / totalQuestions) * 100);
+    return {
+      yourScore: yourScore,
+      totalScore: totalScore,
+      correctQuestions: correctQuestions,
+      totalQuestions: totalQuestions
+    };
+  };
+  renderWelcome = () => {
+    return (
+      <div className="col-lg-12">
+        <div className="col-lg-12 text-center">
+          <h2>Test Your Knowledge</h2>
+
+          <p className="my-5">
+            This section contains multiple choice and yes or no questions
+          </p>
+
+          <button className="btn btn-primary mx-3" onClick={this.nextQuestion}>
+            Continue
+          </button>
+        </div>
+      </div>
+    );
+  };
+
+  render() {
     return (
       <React.Fragment>
         <section className="page-section">
           <div className="container">
-            <div className="row">
-              <div className="p-3 col-lg-12">
-                <div className="progress">
-                  <div
-                    className={barStyle}
-                    role="progressbar"
-                    aria-valuenow={currentValue}
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    style={{ width: currentValue + "%" }}
-                  >
-                    {this.showPercentage(currentValue)}
-                  </div>
-                </div>
-              </div>
-
-              {this.renderQuestion()}
-              {this.renderButtons()}
-              {this.renderMessage(this.state.message)}
-            </div>
+            <div className="row">{this.renderContent(this.state.current)}</div>
           </div>
         </section>
       </React.Fragment>

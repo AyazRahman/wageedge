@@ -46,7 +46,7 @@ const Navigation = () => {
                 id="dropBar"
                 style={{ marginTop: 0 }}
               >
-                <div className="pl-3 nav-item">
+                <div className="nav-item">
                   <Link
                     className="nav-link js-scroll-trigger"
                     to="/workrights/0"
@@ -54,7 +54,7 @@ const Navigation = () => {
                     Work Restrictions
                   </Link>
                 </div>
-                <div className="pl-3 nav-item">
+                <div className="nav-item">
                   <Link
                     className="nav-link js-scroll-trigger"
                     to="/workrights/1"
@@ -62,7 +62,7 @@ const Navigation = () => {
                     Volunteer Work
                   </Link>
                 </div>
-                <div className="pl-3 nav-item">
+                <div className="nav-item">
                   <Link
                     className="nav-link js-scroll-trigger"
                     to="/workrights/2"
@@ -70,7 +70,7 @@ const Navigation = () => {
                     Pay in Cash
                   </Link>
                 </div>
-                <div className="pl-3 nav-item">
+                <div className="nav-item">
                   <Link
                     className="nav-link js-scroll-trigger"
                     to="/workrights/3"
@@ -78,7 +78,7 @@ const Navigation = () => {
                     Deduct money from wage
                   </Link>
                 </div>
-                <div className="pl-3 nav-item">
+                <div className="nav-item">
                   <Link
                     className="nav-link js-scroll-trigger"
                     to="/workrights/4"
@@ -86,7 +86,7 @@ const Navigation = () => {
                     Workplace descrimination
                   </Link>
                 </div>
-                <div className="pl-3 nav-item">
+                <div className="nav-item">
                   <Link
                     className="nav-link js-scroll-trigger"
                     to="/workrights/5"
@@ -94,7 +94,7 @@ const Navigation = () => {
                     Employment Type
                   </Link>
                 </div>
-                <div className="pl-3 nav-item">
+                <div className="nav-item">
                   <Link
                     className="nav-link js-scroll-trigger"
                     to="/workrights/6"
@@ -102,7 +102,7 @@ const Navigation = () => {
                     Leaves and Entitlement
                   </Link>
                 </div>
-                <div className="pl-3 nav-item">
+                <div className="nav-item">
                   <Link
                     className="nav-link js-scroll-trigger"
                     to="/workrights/7"
