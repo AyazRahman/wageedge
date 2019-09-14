@@ -17,7 +17,6 @@ class Quiz extends Component {
 
   componentDidMount() {
     this.getQuestions();
-    //addthis.layers.refresh();
   }
 
   getQuestions = async () => {
@@ -33,6 +32,7 @@ class Quiz extends Component {
       question.correct_explanation = element.correct_explanation;
       question.wrong_explanation = element.wrong_explanation;
       question.answered = null;
+      question.mark = false;
       //related url
       this.state.questions.push(question);
     });
@@ -126,31 +126,63 @@ class Quiz extends Component {
   };
   renderButtons = () => {
     if (this.state.questions.length === 0) return;
-    let prev = "btn btn-primary mx-3",
-      next = "btn btn-primary mx-3";
+    let next = "btn btn-primary mx-3";
+    /*prev = "btn btn-primary mx-3",
     if (this.state.current === 1) {
       prev = `${prev} d-none`;
-    }
-    /*if (this.state.current === this.state.total) {
-      next = `${next} d-none`;
     }*/
+
+    let question = this.state.questions[this.state.current - 1];
     return (
-      <div className="container col-12 py-3 text-center">
-        <button className={prev} onClick={this.prevQuestion}>
-          Prev
-        </button>
-        <button
-          className="btn btn-primary mx-3"
-          onClick={() =>
-            this.showAnswer(this.state.questions[this.state.current - 1])
-          }
-        >
-          Check Answer
-        </button>
-        <button className={next} onClick={this.nextQuestion}>
-          Next
-        </button>
-      </div>
+      <React.Fragment>
+        <div className="container col-12 py-3 text-center">
+          <button
+            className={next}
+            onClick={() => {
+              question.mark = !question.mark;
+              let questions = this.state.questions;
+              questions[this.state.current - 1] = question;
+              this.setState({ questions: questions });
+            }}
+          >
+            {question.mark ? "Marked" : "Mark"}{" "}
+            <i className="fas fa-thumbtack" />
+          </button>
+          <button className={next} onClick={this.nextQuestion}>
+            {this.state.current === this.state.total ? "Finish" : "Next"}
+            <i className="fas fa-chevron-right" />
+          </button>
+        </div>
+        <div className="container col-12 py-3 text-center">
+          {this.state.questions.map(question =>
+            this.renderSelectButton(question)
+          )}
+        </div>
+      </React.Fragment>
+    );
+  };
+
+  renderSelectButton = question => {
+    let button = "";
+    if (question.mark) {
+      button = "btn-danger";
+    } else {
+      if (question.id < this.state.current) {
+        button = "btn-primary";
+      } else {
+        button = "btn-secondary";
+      }
+    }
+    return (
+      <button
+        className={`btn ${button} m-3`}
+        key={question.id}
+        onClick={() => {
+          this.setState({ current: question.id });
+        }}
+      >
+        {question.id}
+      </button>
     );
   };
 
@@ -339,3 +371,17 @@ class Quiz extends Component {
 }
 
 export default Quiz;
+
+/*
+<button className={prev} onClick={this.prevQuestion}>
+          Prev
+        </button>
+        <button
+          className="btn btn-primary mx-3"
+          onClick={() =>
+            this.showAnswer(this.state.questions[this.state.current - 1])
+          }
+        >
+          Check Answer
+        </button>
+*/
