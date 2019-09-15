@@ -322,9 +322,6 @@ class Workrights extends Component {
             </div>
             <div className="col-lg-12">
               <p>
-                <b>Public holidays</b>
-              </p>
-              <p>
                 As an international student, you can request{" "}
                 <b>flexible working arrangements</b> at your workplace. After
                 this period you can request flexible arrangement, if you:

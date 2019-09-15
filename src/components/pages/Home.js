@@ -14,41 +14,41 @@ const section = () => {
 
         <div className="row text-center mt-5">
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded h-100">
-              <Link to="/workrights/0">
+            <Link to="/workrights/0">
+              <div className="p-2 bg-white rounded h-100 border hCard">
                 <span className="fa-stack fa-2x">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
                   <i className="fas fa-clock fa-stack-1x fa-inverse" />
                 </span>
                 <h6 className="service-heading text-dark">Work Restrictions</h6>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded h-100">
-              <Link to="/workrights/1">
+            <Link to="/workrights/1">
+              <div className="p-2 bg-white rounded h-100 border hCard">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
                   <i className="fas fa-user-friends fa-stack-1x fa-inverse" />
                 </span>
                 <h6 className="service-heading text-dark">Volunteer Work</h6>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className=" p-2 shadow-lg bg-white rounded h-100">
-              <Link to="/workrights/2">
+            <Link to="/workrights/2">
+              <div className="p-2 bg-white rounded h-100 border hCard">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
                   <i className="fas fa-dollar-sign fa-stack-1x fa-inverse" />
                 </span>
                 <h6 className="service-heading text-dark">Pay in Cash</h6>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded h-100">
-              <Link to="/workrights/3">
+            <Link to="/workrights/3">
+              <div className="p-2 bg-white rounded h-100 border hCard">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
                   <i className="fas fa-minus fa-stack-1x fa-inverse" />
@@ -56,12 +56,12 @@ const section = () => {
                 <h6 className="service-heading text-dark">
                   Deduct money from wage
                 </h6>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded h-100">
-              <Link to="/workrights/4">
+            <Link to="/workrights/4">
+              <div className="p-2 bg-white rounded h-100 border hCard">
                 <span className="fa-stack fa-2x">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
                   <i className="fas fa-gavel fa-stack-1x fa-inverse" />
@@ -69,24 +69,24 @@ const section = () => {
                 <h6 className="service-heading text-dark">
                   Workplace descrimination
                 </h6>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded h-100">
-              <Link to="/workrights/5">
+            <Link to="/workrights/6">
+              <div className="p-2 bg-white rounded h-100 border hCard">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
                   <i className="fas fa-book-open fa-stack-1x fa-inverse" />
                 </span>
                 <h6 className="service-heading text-dark">Employment Type</h6>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
 
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded h-100">
-              <Link to="/workrights/6">
+            <Link to="/workrights/6">
+              <div className="p-2 bg-white rounded h-100 border hCard">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
                   <i className="fas fa-running fa-stack-1x fa-inverse" />
@@ -94,12 +94,12 @@ const section = () => {
                 <h6 className="service-heading text-dark">
                   Leaves and Entitlement
                 </h6>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <div className="p-2 shadow-lg bg-white rounded h-100">
-              <Link to="/workrights/7">
+            <Link to="/workrights/7">
+              <div className="p-2 bg-white rounded h-100 border hCard">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />
                   <i className="fas fa-infinity fa-stack-1x fa-inverse" />
@@ -107,8 +107,8 @@ const section = () => {
                 <h6 className="service-heading text-dark">
                   Working Arrangements
                 </h6>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
