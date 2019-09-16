@@ -135,7 +135,7 @@ const minwage = () => {
           </div>
           <div className="col-md-6">
             <img
-              src="img/minimum-wage-cartoon.jpg"
+              src="img/minimum-wage.jpg"
               alt="minimum-wage"
               className="img-fluid"
             />

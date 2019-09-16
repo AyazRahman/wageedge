@@ -111,7 +111,7 @@ class Workrights extends Component {
             <div className="col-lg-12 text-center">
               <img
                 src="/img/volunteer.jpg"
-                alt="work-restrictions"
+                alt="volunteer"
                 className="img-fluid my-3"
               />
             </div>
@@ -149,7 +149,7 @@ class Workrights extends Component {
             <div className="col-lg-12 text-center">
               <img
                 src="/img/cash-payment.jpg"
-                alt="work-restrictions"
+                alt="cash payment"
                 className="img-fluid my-3"
               />
             </div>
@@ -171,7 +171,7 @@ class Workrights extends Component {
             <div className="col-lg-12 text-center">
               <img
                 src="/img/deduct.jpg"
-                alt="work-restrictions"
+                alt="deduct money"
                 className="img-fluid my-3"
               />
             </div>
@@ -179,7 +179,7 @@ class Workrights extends Component {
               <p>
                 For example, if you accidentally break something, the employer
                 cannot deduct money from your wages. Further, an employer cannot
-                <b>force you to agree to a deduction</b>.
+                <b> force you to agree to a deduction</b>.
               </p>
               <p>
                 Generally, an employer cannot deduct any money from your wages
@@ -315,7 +315,7 @@ class Workrights extends Component {
             </div>
             <div className="col-lg-12 text-center">
               <img
-                src="/img/flexibleworking.png"
+                src="/img/flexibleworking.jpg"
                 alt="flexible-working"
                 className="img-fluid my-3"
               />
