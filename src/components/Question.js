@@ -18,7 +18,7 @@ class Question extends Component {
         <div key={item} className="p-1 col-md-6">
           <label
             className={`card btn ${
-              item === this.state.question.answered ? "btn-quiz" : "btn-primary"
+              item === this.state.question.answered ? "btn-primary" : "btn-quiz"
             }`}
           >
             <input

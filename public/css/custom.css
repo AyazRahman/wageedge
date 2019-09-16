@@ -98,14 +98,14 @@ img::-moz-selection {
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
 .btn-quiz {
-  background-color: blue;
-  border-color: blue;
+  background-color: #b3b3b3;
+  border-color: #b3b3b3;
   color: #fff;
 }
 .btn-quiz:active,
 .btn-quiz:hover {
-  background-color: blue !important;
-  border-color: blue !important;
+  background-color: #b3b3b3 !important;
+  border-color: #b3b3b3 !important;
   color: #fff;
 }
 .btn-quiz:active,

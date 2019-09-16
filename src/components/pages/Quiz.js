@@ -170,7 +170,7 @@ class Quiz extends Component {
       if (question.id < this.state.current) {
         button = "btn-primary";
       } else {
-        button = "btn-secondary";
+        button = "btn-quiz";
       }
     }
     return (
