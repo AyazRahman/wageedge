@@ -10,6 +10,7 @@ import Workrights from "./pages/Workrights";
 import Minwage from "./pages/Minwage";
 import Quiz from "./pages/Quiz";
 import About from "./pages/About";
+import LegalAdvice from "./pages/LegalAdvice";
 
 import { withRouter } from "react-router";
 
@@ -44,6 +45,7 @@ const App = () => {
 
               <Route path="/quiz" exact component={Quiz} />
               <Route path="/minwage" exact component={Minwage} />
+              <Route path="/legaladvice" exact component={LegalAdvice} />
               <Route path="/about" exact component={About} />
             </Switch>
           </Scroll>

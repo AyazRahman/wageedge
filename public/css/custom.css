@@ -10,12 +10,7 @@ p {
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.8);
 }
-a {
-  color: #fed136;
-}
-a:hover {
-  color: #fec503;
-}
+
 .text-primary {
   color: #fed136 !important;
 }
@@ -692,6 +687,15 @@ ul.social-buttons li a:hover {
 }
 
 .mega-menu {
-  width: 800px;
+  width: 400px;
   overflow: hidden;
 }
+
+/*
+a {
+  color: #fed136;
+}
+a:hover {
+  color: #fec503;
+}
+*/

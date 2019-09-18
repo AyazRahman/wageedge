@@ -47,7 +47,7 @@ const Navigation = () => {
                 style={{ marginTop: 0 }}
               >
                 <div className="row">
-                  <div className="col-lg-3">
+                  <div className="col-lg-6">
                     <div className="nav-item">
                       <Link
                         className="nav-link js-scroll-trigger"
@@ -57,7 +57,7 @@ const Navigation = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="col-lg-3">
+                  <div className="col-lg-6">
                     <div className="nav-item">
                       <Link
                         className="nav-link js-scroll-trigger"
@@ -67,7 +67,10 @@ const Navigation = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="col-lg-3">
+                </div>
+                <div className="dropdown-divider"></div>
+                <div className="row">
+                  <div className="col-lg-6">
                     <div className="nav-item">
                       <Link
                         className="nav-link js-scroll-trigger"
@@ -77,7 +80,7 @@ const Navigation = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="col-lg-3">
+                  <div className="col-lg-6">
                     <div className="nav-item">
                       <Link
                         className="nav-link js-scroll-trigger"
@@ -88,19 +91,19 @@ const Navigation = () => {
                     </div>
                   </div>
                 </div>
-
+                <div className="dropdown-divider"></div>
                 <div className="row">
-                  <div className="col-lg-3">
+                  <div className="col-lg-6">
                     <div className="nav-item">
                       <Link
                         className="nav-link js-scroll-trigger"
                         to="/workrights/4"
                       >
-                        Workplace descrimination
+                        Tax File Number
                       </Link>
                     </div>
                   </div>
-                  <div className="col-lg-3">
+                  <div className="col-lg-6">
                     <div className="nav-item">
                       <Link
                         className="nav-link js-scroll-trigger"
@@ -110,7 +113,10 @@ const Navigation = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="col-lg-3">
+                </div>
+                <div className="dropdown-divider"></div>
+                <div className="row">
+                  <div className="col-lg-6">
                     <div className="nav-item">
                       <Link
                         className="nav-link js-scroll-trigger"
@@ -120,7 +126,7 @@ const Navigation = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="col-lg-3">
+                  <div className="col-lg-6">
                     <div className="nav-item">
                       <Link
                         className="nav-link js-scroll-trigger"
@@ -137,6 +143,16 @@ const Navigation = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/quiz">
                 Quiz
+              </Link>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/Interactive_module.html">
+                Educational Module
+              </a>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/legaladvice">
+                Legal Advice
               </Link>
             </li>
           </ul>

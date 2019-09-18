@@ -7,7 +7,7 @@ const pageOptions = [
   { title: "Volunteer Work", icon: "user-friends" },
   { title: "Pay in Cash", icon: "dollar-sign" },
   { title: "Deduct money from wage", icon: "minus" },
-  { title: "Workplace descrimination", icon: "gavel" },
+  { title: "Tax File Number", icon: "gavel" },
   { title: "Employment Type", icon: "book-open" },
   { title: "Leaves and Entitlement", icon: "running" },
   { title: "Flexible Working Arrangements", icon: "infinity" }
@@ -205,38 +205,23 @@ class Workrights extends Component {
         return (
           <div className="row page-section" style={{ fontSize: 20 }}>
             <div className="col-lg-12">
-              Adverse action taken by an employer includes doing, threatening or
-              organising any of the following:
-            </div>
-            <div className="col-lg-12 text-center">
-              <img
-                src="/img/discirmination.png"
-                alt="work-restrictions"
-                className="img-fluid my-3"
-              />
-            </div>
-            <div className="col-lg-12">
-              <ul>
-                <li>
-                  <b>dismissing</b> an employee
-                </li>
-                <li>
-                  <b>injuring</b> an employee in their employment
-                </li>
-                <li>
-                  <b>altering an employee's position</b> to their detriment
-                </li>
-                <li>
-                  discriminating <b>between</b> one employee and other employees
-                </li>
-                <li>
-                  <b>refusing</b> to employ a prospective employee
-                </li>
-                <li>
-                  discriminating against a prospective employee on the{" "}
-                  <b>terms and conditions in the offer of employment</b>.
-                </li>
-              </ul>
+              <p>
+                If you've earned money while in Australia, then it's very likely
+                you will need to lodge a tax return. Most international students
+                studying for more than 6 months are considered "Australian
+                residents for tax purposes" which means you have to declare your
+                income on a tax return.
+              </p>
+              <p>
+                {" "}
+                If you do not have a Tax File Number (TFN) you will have more
+                tax withheld (46.5%) from your wages or pay more tax on bank
+                interest than necessary. Therefore, We would encourage you to
+                apply for a TFN. As an international student, you are able to
+                apply for a Tax File Number (TFN) via the Australian Taxation
+                Office (ATO) website. You will not be able to submit this
+                application until you have arrived in Australia.
+              </p>
             </div>
           </div>
         );

@@ -66,9 +66,7 @@ const section = () => {
                   <i className="fas fa-circle fa-stack-2x text-primary" />
                   <i className="fas fa-gavel fa-stack-1x fa-inverse" />
                 </span>
-                <h6 className="service-heading text-dark">
-                  Workplace descrimination
-                </h6>
+                <h6 className="service-heading text-dark">Tax File Number</h6>
               </div>
             </Link>
           </div>
