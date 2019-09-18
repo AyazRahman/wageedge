@@ -141,11 +141,6 @@ const Navigation = () => {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/quiz">
-                Quiz
-              </Link>
-            </li>
-            <li className="nav-item">
               <a className="nav-link" href="/Interactive_module.html">
                 Educational Module
               </a>
@@ -165,6 +160,13 @@ const Navigation = () => {
 export default Navigation;
 
 /*
+
+<li className="nav-item">
+              <Link className="nav-link" to="/quiz">
+                Quiz
+              </Link>
+            </li>
+
 <li className="nav-item">
               <Link className="nav-link js-scroll-trigger" to="#contact">
                 Contact

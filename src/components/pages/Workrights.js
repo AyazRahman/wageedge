@@ -218,10 +218,28 @@ class Workrights extends Component {
                 tax withheld (46.5%) from your wages or pay more tax on bank
                 interest than necessary. Therefore, We would encourage you to
                 apply for a TFN. As an international student, you are able to
-                apply for a Tax File Number (TFN) via the Australian Taxation
-                Office (ATO) website. You will not be able to submit this
-                application until you have arrived in Australia.
+                apply for a Tax File Number (TFN) via the{" "}
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.ato.gov.au/individuals/tax-file-number/apply-for-a-tfn/foreign-passport-holders,-permanent-migrants-and-temporary-visitors---tfn-application/"
+                >
+                  Australian Taxation Office
+                </a>{" "}
+                (ATO) website. You will not be able to submit this application
+                until you have arrived in Australia.
               </p>
+            </div>
+            <div className="col-lg-12 text-center my-3">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://iar.ato.gov.au/IARWeb/default.aspx?pid=4&sid=1&outcome=1"
+              >
+                <button className="btn btn-primary">
+                  Apply for TFN online
+                </button>
+              </a>
             </div>
           </div>
         );
