@@ -154,12 +154,66 @@ const about = () => {
           </div>
           <div className="col-md-6">
             <h2>About us</h2>
-            <p className="mt-3">
+            <p style={{ fontSize: 20 }} className="mt-3">
               We aim to help international students to figure out the minimum
               wages they should get, improve their awareness of fair work
               rights, and also make them aware of the legal rights they have as
               an international student in Australia.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const educationModule = () => {
+  return (
+    <section className="page-section">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <img
+              className="img-fluid"
+              src="img/role-play.jpg"
+              alt="role play"
+            />
+          </div>
+          <div className="col-md-6">
+            <h2>Interactive Module</h2>
+            <p style={{ fontSize: 20 }} className="mt-3">
+              Put yourself in real life situations and experience the different
+              work related issues you might face while working in Australia
+            </p>
+            <a href="/Interactive_module.html">
+              <button className="btn btn-primary btn-lg mt-3">Try Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const legalAdvice = () => {
+  return (
+    <section className="page-section">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <h2>Legal Advice</h2>
+            <p style={{ fontSize: 20 }} className="mt-3">
+              International students have the same workplace rights as all other
+              workers in Australia. Fair Work OMBUDSMAN (FWO) provides free
+              legal advice and assistance to all workers to help them understand
+              their rights.
+            </p>
+            <Link to="/legaladvice">
+              <button className="btn btn-primary btn-lg mt-3">Try Now</button>
+            </Link>
+          </div>
+          <div className="col-md-6">
+            <img className="img-fluid" src="img/TFN.jpg" alt="role play" />
           </div>
         </div>
       </div>
@@ -200,6 +254,8 @@ const Home = () => {
       <Header image={imageURL} />
       {section()}
       {minwage()}
+      {educationModule()}
+      {legalAdvice()}
       {about()}
     </div>
   );
