@@ -331,8 +331,8 @@ class Workrights extends Component {
               </p>
               <ul>
                 <li>
-                  are the <b>parent</b>, or have{" "}
-                  <b>responsibility for the care</b>, of a child who is school
+                  are the <b>parent</b>, or have responsibility for the care, of
+                  a child who is school
                 </li>
                 <li>aged or younger</li>
                 <li>
@@ -346,9 +346,8 @@ class Workrights extends Component {
                 </li>
                 <li>are experiencing family or domestic violence, or</li>
                 <li>
-                  <b>provide care</b> or support to a member of their household
-                  or immediate family who requires care and support because of
-                  family or domestic violence.
+                  provide care and support to their immediate family who
+                  requires assistance because of family or domestic violence.
                 </li>
               </ul>
             </div>
