@@ -209,7 +209,9 @@ const legalAdvice = () => {
               their rights.
             </p>
             <Link to="/legaladvice">
-              <button className="btn btn-primary btn-lg mt-3">Try Now</button>
+              <button className="btn btn-primary btn-lg mt-3">
+                Learn More
+              </button>
             </Link>
           </div>
           <div className="col-md-6">
