@@ -73,8 +73,15 @@ class Workrights extends Component {
     switch (id) {
       case 0:
         return (
-          <div className="row page-section" style={{ fontSize: 20 }}>
-            <div className="col-md-6">
+          <div className="row mt-3" style={{ fontSize: 20 }}>
+            <div className="col-md-12 text-center">
+              <img
+                src="/img/work-restrictions.png"
+                alt="work-restrictions"
+                className="img-fluid my-3"
+              />
+            </div>
+            <div className="col-md-12">
               <ul>
                 <li>
                   You <b>must not</b> work in Australia before your course of
@@ -90,13 +97,6 @@ class Workrights extends Component {
                   Monday.
                 </li>
               </ul>
-            </div>
-            <div className="col-md-6">
-              <img
-                src="/img/work-restrictions.png"
-                alt="work-restrictions"
-                className="img-fluid my-3"
-              />
             </div>
           </div>
         );
