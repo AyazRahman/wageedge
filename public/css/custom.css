@@ -691,6 +691,15 @@ ul.social-buttons li a:hover {
   overflow: hidden;
 }
 
+.breadcrumb {
+  background-color: #fff;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #eebf29;
+  font-weight: bold;
+  content: ">";
+}
+
 /*
 a {
   color: #fed136;

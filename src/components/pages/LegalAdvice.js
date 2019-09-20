@@ -1,9 +1,15 @@
 import React from "react";
+import Breadcrumb from "../breadcrumb";
 
 const LegalAdvice = () => {
+  const items = [
+    { title: "Home", link: "/" },
+    { title: "Legal Advice", link: "/legaladvice" }
+  ];
   return (
     <section className="page-section">
       <div className="container">
+        <Breadcrumb items={items} />
         <div className="row">
           <div className="col-lg-12">
             <h2 className="section-heading text-center">Legal Advice</h2>

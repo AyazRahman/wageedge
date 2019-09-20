@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import api from "../../API/api";
 import Question from "../Question";
+import Breadcrumb from "../breadcrumb";
 
 class Quiz extends Component {
   constructor(props) {
@@ -17,6 +18,12 @@ class Quiz extends Component {
 
   componentDidMount() {
     this.getQuestions();
+  }
+
+  componentWillUnmount() {
+    if (document.getElementById("addthis")) {
+      document.getElementById("addthis").remove();
+    }
   }
 
   getQuestions = async () => {
@@ -284,7 +291,9 @@ class Quiz extends Component {
         "src",
         "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d765179055d2125"
       );
-      if (document.body) document.body.appendChild(addthisScript);
+      addthisScript.setAttribute("id", "addthis");
+      if (document.body && !document.getElementById("addthis"))
+        document.body.appendChild(addthisScript);
     });
     return (
       <React.Fragment>
@@ -358,10 +367,15 @@ class Quiz extends Component {
   };
 
   render() {
+    const items = [
+      { title: "Home", link: "/" },
+      { title: "Quiz", link: "/quiz" }
+    ];
     return (
       <React.Fragment>
         <section className="page-section">
           <div className="container">
+            <Breadcrumb items={items}></Breadcrumb>
             <div className="row">{this.renderContent(this.state.current)}</div>
           </div>
         </section>

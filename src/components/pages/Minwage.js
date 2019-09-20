@@ -1,11 +1,17 @@
 import React from "react";
 
 import Chart from "../Chart";
+import Breadcrumb from "../breadcrumb";
 
 const Minwage = () => {
+  const items = [
+    { title: "Home", link: "/" },
+    { title: "Minimum Wage", link: "/minwage" }
+  ];
   return (
     <section className="page-section">
       <div className="container">
+        <Breadcrumb items={items}></Breadcrumb>
         <div className="row">
           <div className="col-lg-12">
             <h2 className="section-heading text-center">
