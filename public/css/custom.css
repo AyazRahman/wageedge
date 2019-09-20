@@ -701,7 +701,7 @@ ul.social-buttons li a:hover {
 }
 iframe {
   position: fixed;
-  top: 50px;
+  top: 100px;
   bottom: 0px;
   right: 0px;
   width: 100%;
@@ -709,8 +709,12 @@ iframe {
   margin: 0;
   padding: 0;
   overflow: hidden;
-
+  z-index: 1;
   height: 100%;
+}
+
+.active-link {
+  color: #fed136 !important;
 }
 
 /*

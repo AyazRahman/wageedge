@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 //import history from "../history";
 import Navigation from "./common/Navigation";
@@ -13,6 +13,7 @@ import Quiz from "./pages/Quiz";
 import About from "./pages/About";
 import LegalAdvice from "./pages/LegalAdvice";
 import Interactive from "./pages/Interactive";
+import Workright from "./pages/Workright";
 
 import { withRouter } from "react-router";
 
@@ -39,11 +40,8 @@ const App = () => {
           <Scroll>
             <Switch>
               <Route path="/" exact component={Home} />
-
+              <Route path="/workrights" exact component={Workright} />
               <Route path="/workrights/:id" exact component={Workrights} />
-              <Route path="/workights" exact>
-                <Redirect to="/workrights/1"></Redirect>
-              </Route>
 
               <Route path="/quiz" exact component={Quiz} />
               <Route path="/minwage" exact component={Minwage} />
