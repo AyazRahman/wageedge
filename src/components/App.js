@@ -3,14 +3,16 @@ import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 
 //import history from "../history";
 import Navigation from "./common/Navigation";
-import Home from "./pages/Home";
 import Footer from "./common/Footer";
+import Home from "./pages/Home";
+
 import Workrights from "./pages/Workrights";
 //import Workrightsn from "./pages/Workrights";
 import Minwage from "./pages/Minwage";
 import Quiz from "./pages/Quiz";
 import About from "./pages/About";
 import LegalAdvice from "./pages/LegalAdvice";
+import Interactive from "./pages/Interactive";
 
 import { withRouter } from "react-router";
 
@@ -47,6 +49,7 @@ const App = () => {
               <Route path="/minwage" exact component={Minwage} />
               <Route path="/legaladvice" exact component={LegalAdvice} />
               <Route path="/about" exact component={About} />
+              <Route path="/interactive" exact component={Interactive} />
             </Switch>
           </Scroll>
         </div>

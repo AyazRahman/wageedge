@@ -142,7 +142,7 @@ const Navigation = () => {
 
             <li className="nav-item">
               <a className="nav-link" href="/Interactive_module.html">
-                Educational Module
+                Interactive Module
               </a>
             </li>
             <li className="nav-item">
