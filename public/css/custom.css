@@ -691,6 +691,20 @@ ul.social-buttons li a:hover {
   overflow: hidden;
 }
 
+iframe {
+  position: fixed;
+  top: 50px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  height: 100%;
+}
+
 /*
 a {
   color: #fed136;
