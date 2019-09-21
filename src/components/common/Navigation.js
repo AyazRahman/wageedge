@@ -17,7 +17,9 @@ class Navigation extends Component {
   toggleShow = () => {
     //debugger;
     let dropdown = document.getElementById("navbarResponsive");
-    dropdown.classList.toggle("show");
+    if (dropdown.classList.contains("show")) {
+      dropdown.classList.toggle("show");
+    }
   };
 
   render() {
@@ -114,7 +116,7 @@ class Navigation extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="dropdown-divider"></div>
+
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="nav-item">
@@ -143,7 +145,7 @@ class Navigation extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="dropdown-divider"></div>
+
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="nav-item">
@@ -172,7 +174,7 @@ class Navigation extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="dropdown-divider"></div>
+
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="nav-item">

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-
 import { Link } from "react-router-dom";
+
+import Breadcrumb from "../breadcrumb";
 
 const pageOptions = [
   { title: "Work Restriction", icon: "clock" },
@@ -359,10 +360,19 @@ class Workrights extends Component {
     }
   };
   render() {
+    let { id } = this.state;
+    const items = [
+      { title: "Home", link: "/" },
+      { title: "Workrights", link: "/workrights" },
+      { title: pageOptions[id].title, link: "" }
+    ];
     return (
       <section className="page-section">
-        <div className="container">{this.renderOptions(this.state.id)}</div>
-        <div className="container">{this.renderContent(this.state.id)}</div>
+        <div className="container">
+          <Breadcrumb items={items}></Breadcrumb>
+        </div>
+        <div className="container">{this.renderOptions(id)}</div>
+        <div className="container">{this.renderContent(id)}</div>
       </section>
     );
   }
