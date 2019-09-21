@@ -5,13 +5,20 @@ import { withRouter } from "react-router";
 class Navigation extends Component {
   constructor(props) {
     super(props);
-    this.state = { active: this.props.location.pathname };
+    this.state = { active: this.props.location.pathname, show: "" };
   }
+
   componentDidUpdate(prevProps) {
     if (this.props.location.pathname !== prevProps.location.pathname) {
       this.setState({ active: this.props.location.pathname });
     }
   }
+
+  toggleShow = () => {
+    //debugger;
+    let dropdown = document.getElementById("navbarResponsive");
+    dropdown.classList.toggle("show");
+  };
 
   render() {
     let { active } = this.state;
@@ -21,7 +28,11 @@ class Navigation extends Component {
         id="mainNav"
       >
         <div className="container">
-          <Link className="navbar-brand js-scroll-trigger" to="/">
+          <Link
+            onClick={() => this.toggleShow()}
+            className="navbar-brand"
+            to="/"
+          >
             Wage Edge
           </Link>
           <button
@@ -40,7 +51,8 @@ class Navigation extends Component {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link
-                  className={`nav-link ${active === "/" ? "active-link" : ""}`}
+                  onClick={() => this.toggleShow()}
+                  className={`nav-link  ${active === "/" ? "active-link" : ""}`}
                   to="/"
                 >
                   Home
@@ -49,6 +61,7 @@ class Navigation extends Component {
 
               <li className="nav-item">
                 <Link
+                  onClick={() => this.toggleShow()}
                   className={`nav-link ${
                     active === "/minwage" ? "active-link" : ""
                   }`}
@@ -60,6 +73,7 @@ class Navigation extends Component {
 
               <li className="nav-item dropdown">
                 <Link
+                  onClick={() => this.toggleShow()}
                   className={`nav-link dropdown-toggle ${
                     active === "/workrights" ? "active-link" : ""
                   }`}
@@ -76,6 +90,7 @@ class Navigation extends Component {
                     <div className="col-lg-6">
                       <div className="nav-item">
                         <Link
+                          onClick={() => this.toggleShow()}
                           className={`nav-link ${
                             active === "/workrights/0" ? "active-link" : ""
                           }`}
@@ -88,6 +103,7 @@ class Navigation extends Component {
                     <div className="col-lg-6">
                       <div className="nav-item">
                         <Link
+                          onClick={() => this.toggleShow()}
                           className={`nav-link ${
                             active === "/workrights/1" ? "active-link" : ""
                           }`}
@@ -103,6 +119,7 @@ class Navigation extends Component {
                     <div className="col-lg-6">
                       <div className="nav-item">
                         <Link
+                          onClick={() => this.toggleShow()}
                           className={`nav-link ${
                             active === "/workrights/2" ? "active-link" : ""
                           }`}
@@ -115,6 +132,7 @@ class Navigation extends Component {
                     <div className="col-lg-6">
                       <div className="nav-item">
                         <Link
+                          onClick={() => this.toggleShow()}
                           className={`nav-link ${
                             active === "/workrights/3" ? "active-link" : ""
                           }`}
@@ -130,6 +148,7 @@ class Navigation extends Component {
                     <div className="col-lg-6">
                       <div className="nav-item">
                         <Link
+                          onClick={() => this.toggleShow()}
                           className={`nav-link ${
                             active === "/workrights/4" ? "active-link" : ""
                           }`}
@@ -142,6 +161,7 @@ class Navigation extends Component {
                     <div className="col-lg-6">
                       <div className="nav-item">
                         <Link
+                          onClick={() => this.toggleShow()}
                           className={`nav-link ${
                             active === "/workrights/5" ? "active-link" : ""
                           }`}
@@ -157,6 +177,7 @@ class Navigation extends Component {
                     <div className="col-lg-6">
                       <div className="nav-item">
                         <Link
+                          onClick={() => this.toggleShow()}
                           className={`nav-link ${
                             active === "/workrights/6" ? "active-link" : ""
                           }`}
@@ -169,6 +190,7 @@ class Navigation extends Component {
                     <div className="col-lg-6">
                       <div className="nav-item">
                         <Link
+                          onClick={() => this.toggleShow()}
                           className={`nav-link ${
                             active === "/workrights/7" ? "active-link" : ""
                           }`}
@@ -184,6 +206,7 @@ class Navigation extends Component {
 
               <li className="nav-item">
                 <Link
+                  onClick={() => this.toggleShow()}
                   className={`nav-link ${
                     active === "/interactive" ? "active-link" : ""
                   }`}
@@ -194,6 +217,7 @@ class Navigation extends Component {
               </li>
               <li className="nav-item">
                 <Link
+                  onClick={() => this.toggleShow()}
                   className={`nav-link ${
                     active === "/legaladvice" ? "active-link" : ""
                   }`}
