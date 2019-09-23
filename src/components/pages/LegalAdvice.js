@@ -84,7 +84,7 @@ const LegalAdvice = () => {
               <p>Additional Resources:</p>
 
               <ul>
-                <li>
+                <li className="mb-2">
                   <a
                     href="https://www.studymelbourne.vic.gov.au/event/international-students-work-rights-legal-service-tue"
                     rel="noopener noreferrer"
@@ -92,8 +92,14 @@ const LegalAdvice = () => {
                   >
                     Study Melbourne
                   </a>
+                  <span>
+                    {" "}
+                    - Award-winning Study Melbourne Student Centre offers free
+                    support, information and contacts to help international
+                    students enjoy living , studying and working in Victoria.
+                  </span>
                 </li>
-                <li>
+                <li className="mb-2">
                   <a
                     href="http://www.youngworkers.org.au/"
                     rel="noopener noreferrer"
@@ -101,6 +107,12 @@ const LegalAdvice = () => {
                   >
                     Young Workers
                   </a>
+                  <span>
+                    {" "}
+                    - The Young Workers Centre is a one-stop-shop for young
+                    workers who want to learn more about their rights at work or
+                    who need assistance in resolving workplace issues.
+                  </span>
                 </li>
               </ul>
             </div>

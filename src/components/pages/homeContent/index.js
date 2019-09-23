@@ -52,9 +52,7 @@ export const section = () => {
                   <i className="fas fa-circle fa-stack-2x text-primary" />
                   <i className="fas fa-minus fa-stack-1x fa-inverse" />
                 </span>
-                <h6 className="service-heading text-dark">
-                  Deduct money from wage
-                </h6>
+                <h6 className="service-heading text-dark">Deduct Money</h6>
               </div>
             </Link>
           </div>

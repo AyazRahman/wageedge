@@ -140,7 +140,7 @@ class Navigation extends Component {
                           }`}
                           to="/workrights/3"
                         >
-                          Deduct money from wage
+                          Deduct Money
                         </Link>
                       </div>
                     </div>

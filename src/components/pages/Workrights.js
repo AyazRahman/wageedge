@@ -7,7 +7,7 @@ const pageOptions = [
   { title: "Work Restriction", icon: "clock" },
   { title: "Volunteer Work", icon: "user-friends" },
   { title: "Pay in Cash", icon: "dollar-sign" },
-  { title: "Deduct money from wage", icon: "minus" },
+  { title: "Deduct money", icon: "minus" },
   { title: "Tax File Number", icon: "gavel" },
   { title: "Employment Type", icon: "book-open" },
   { title: "Leaves and Entitlement", icon: "running" },
