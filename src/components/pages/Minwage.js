@@ -1,6 +1,7 @@
 import React from "react";
 
-import Chart from "../Chart";
+//import Chart from "../Chart";
+import Dashboard from "../Dashboard";
 import Breadcrumb from "../breadcrumb";
 
 const Minwage = () => {
@@ -35,7 +36,9 @@ const Minwage = () => {
               </ul>
             </div>
           </div>
-          <Chart />
+        </div>
+        <div className="row my-5">
+          <Dashboard />
         </div>
       </div>
     </section>

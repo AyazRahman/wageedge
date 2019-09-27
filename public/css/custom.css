@@ -717,6 +717,14 @@ iframe {
   color: #fed136 !important;
 }
 
+.min-deactive {
+  opacity: 0.5;
+}
+
+hr {
+  border-top: 3px dashed #fed136;
+}
+
 /*
 a {
   color: #fed136;
