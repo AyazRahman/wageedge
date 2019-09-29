@@ -16,7 +16,7 @@ class Details extends Component {
     let { item } = this.state;
     let { hour_per_rate, week_per_rate, public_holiday } = item;
     let hour_percentage = ~~((hour_per_rate / 30) * 80);
-    let week_percentage = ~~((week_per_rate / 1000) * 80);
+    let week_percentage = ~~((week_per_rate / 1200) * 80);
     let public_percentage = ~~((public_holiday / 100) * 80);
     return (
       <>
