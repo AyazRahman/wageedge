@@ -14,6 +14,7 @@ import About from "./pages/About";
 import LegalAdvice from "./pages/LegalAdvice";
 import Interactive from "./pages/Interactive";
 import Workright from "./pages/Workright";
+import JobInsight from "./pages/JobInsight";
 
 import { withRouter } from "react-router";
 
@@ -42,7 +43,7 @@ const App = () => {
               <Route path="/" exact component={Home} />
               <Route path="/workrights" exact component={Workright} />
               <Route path="/workrights/:id" exact component={Workrights} />
-
+              <Route path="/jobinsight" exact component={JobInsight} />
               <Route path="/quiz" exact component={Quiz} />
               <Route path="/minwage" exact component={Minwage} />
               <Route path="/legaladvice" exact component={LegalAdvice} />
