@@ -1,20 +1,33 @@
 import React, { Component } from "react";
 
 import Map from "../MapSection/Map";
+import JobPosting from "../JobPosting";
 
 class JobInsight extends Component {
   render() {
     return (
-      <div className="page-section">
-        <div className="container">
-          <div className="row">
-            <h1>Job posting</h1>
+      <>
+        <section className="page-section">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12 text-center">
+                <h2 className="section-heading">Job Posting Trends</h2>
+              </div>
+              <JobPosting />
+            </div>
           </div>
-          <div className="row">
-            <Map />
+        </section>
+        <section className="page-section">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12 text-center">
+                <h2 className="section-heading">Tafe Locations</h2>
+              </div>
+              <Map />
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </>
     );
   }
 }

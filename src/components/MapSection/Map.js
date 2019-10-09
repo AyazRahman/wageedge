@@ -3,10 +3,13 @@ import React, { Component } from "react";
 import MapGL, {
   Marker,
   NavigationControl,
-  FlyToInterpolator
+  FlyToInterpolator,
+  Popup
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import api from "../../API/api";
+import CityPin from "./CityPin";
+import LocationInfo from "./LocationInfo";
 
 const navStyle = {
   position: "absolute",
@@ -26,15 +29,17 @@ class Map extends Component {
         height: "50vh",
         zoom: 12
       },
-      searchText: ""
+      searchText: "",
+      popupInfo: null
     };
   }
   componentDidMount() {
     this.getData();
   }
+
   getData = async () => {
-    //const delay = ms => new Promise(res => setTimeout(res, ms));
-    //await delay(1000);
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+    await delay(1000);
     let defaultSettings = this.state.defaultSettings;
     window.navigator.geolocation.getCurrentPosition(
       position => {
@@ -50,8 +55,8 @@ class Map extends Component {
         defaultSettings.longitude = 144.9623;
       }
     );
-    let request = await api.get("/tafe_info");
-    let response = request.data.data;
+    /*let request = await api.get("/tafe_info");
+    let response = request.data.data;*/
 
     this.setState({ data: response });
   };
@@ -60,26 +65,45 @@ class Map extends Component {
     this.setState({ searchText: event.target.value });
   };
 
+  renderPopup = () => {
+    const { popupInfo } = this.state;
+
+    return (
+      popupInfo && (
+        <Popup
+          tipSize={5}
+          anchor="top"
+          longitude={popupInfo.longitude}
+          latitude={popupInfo.latitude}
+          closeOnClick={false}
+          onClose={() => this.setState({ popupInfo: null })}
+        >
+          <LocationInfo info={popupInfo} />
+        </Popup>
+      )
+    );
+  };
   renderSidePanelItems = searchText => {
     return this.state.data
-      .filter(item => item.tafe_name.toLowerCase().includes(searchText))
+      .filter(item =>
+        item.tafe_name.toLowerCase().includes(searchText.trim().toLowerCase())
+      )
       .map(item => {
         return (
           <div key={item.tafe_id} style={{ borderBottom: "1px solid #eee" }}>
-            <div className="mx-2">
-              <h6
-                className="mt-2"
-                onClick={() => {
-                  this.flyToPoint(
-                    Number(item.latitude),
-                    Number(item.longitude)
-                  );
-                }}
-              >
-                {item.tafe_name}
-              </h6>
-              <p>{item.street_address}</p>
-            </div>
+            <a
+              style={{ color: "black" }}
+              href="/#"
+              onClick={e => {
+                e.preventDefault();
+                this.flyToPoint(Number(item.latitude), Number(item.longitude));
+              }}
+            >
+              <div className="mx-2">
+                <h6 className="mt-2">{item.tafe_name}</h6>
+                <p>{item.street_address}</p>
+              </div>
+            </a>
           </div>
         );
       });
@@ -93,13 +117,9 @@ class Map extends Component {
           latitude={Number(item.latitude)}
           longitude={Number(item.longitude)}
         >
-          <img
-            src="/img/location.png"
-            alt="map marker"
-            style={{
-              height: `${this.state.defaultSettings.zoom * 0.2}rem`,
-              width: `${this.state.defaultSettings.zoom * 0.2}rem`
-            }}
+          <CityPin
+            size={20}
+            onClick={() => this.setState({ popupInfo: item })}
           />
         </Marker>
       );
@@ -162,6 +182,7 @@ class Map extends Component {
             transitionInterpolator={new FlyToInterpolator()}
           >
             {this.renderMarker()}
+            {this.renderPopup()}
             <div className="nav" style={navStyle}>
               <NavigationControl />
             </div>
@@ -220,7 +241,18 @@ const response = [
     suburb: "2 Tafe",
     latitude: -37.878443,
     longitude: 145.03422
-  }*/
+  }
+  
+  <img
+            src="/img/location.png"
+            alt="map marker"
+            style={{
+              height: `${this.state.defaultSettings.zoom * 0.2}rem`,
+              width: `${this.state.defaultSettings.zoom * 0.2}rem`
+            }}
+          />
+  
+  */
 ];
 
 export default Map;

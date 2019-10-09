@@ -24,7 +24,7 @@ class Details extends Component {
         <hr />
         <div className="row mb-2" style={{ fontSize: 20 }}>
           <div className="col-2">
-            <strong className="text-primary">{hour_per_rate}</strong>
+            <strong className="text-primary">${hour_per_rate}</strong>
           </div>
           <div className="col-5">Hourly Pay Rate</div>
           <div className="col-5">
@@ -51,7 +51,7 @@ class Details extends Component {
         </div>
         <div className="row mb-2" style={{ fontSize: 20 }}>
           <div className="col-2">
-            <strong className="text-primary">{week_per_rate}</strong>
+            <strong className="text-primary">${week_per_rate}</strong>
           </div>
           <div className="col-5">Weekly Pay Rate</div>
           <div className="col-5">
@@ -78,7 +78,7 @@ class Details extends Component {
         </div>
         <div className="row mb-2" style={{ fontSize: 20 }}>
           <div className="col-2">
-            <strong className="text-primary">{public_holiday}</strong>
+            <strong className="text-primary">${public_holiday}</strong>
           </div>
           <div className="col-5">Holiday Pay Rate</div>
           <div className="col-5">

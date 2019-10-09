@@ -7,7 +7,7 @@ const ICON = `M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,
 const pinStyle = {
   cursor: "pointer",
   fill: "#d00",
-  stroke: "none"
+  stroke: "black"
 };
 
 export default class CityPin extends PureComponent {
@@ -24,7 +24,7 @@ export default class CityPin extends PureComponent {
         }}
         onClick={onClick}
       >
-        <path d={ICON} />
+        <path d={ICON} strokeWidth="0.5" />
       </svg>
     );
   }
