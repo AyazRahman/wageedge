@@ -72,6 +72,17 @@ class Navigation extends Component {
                   Minimum Wage
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  onClick={() => this.toggleShow()}
+                  className={`nav-link ${
+                    active === "/minwage" ? "active-link" : ""
+                  }`}
+                  to="/jobinsight"
+                >
+                  Industry Insight
+                </Link>
+              </li>
 
               <li className="nav-item dropdown">
                 <Link

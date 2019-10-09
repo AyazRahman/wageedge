@@ -30,7 +30,8 @@ class Map extends Component {
         zoom: 12
       },
       searchText: "",
-      popupInfo: null
+      popupInfo: null,
+      user: null
     };
   }
   componentDidMount() {
@@ -38,8 +39,8 @@ class Map extends Component {
   }
 
   getData = async () => {
-    const delay = ms => new Promise(res => setTimeout(res, ms));
-    await delay(1000);
+    /*const delay = ms => new Promise(res => setTimeout(res, ms));
+    await delay(1000);*/
     let defaultSettings = this.state.defaultSettings;
     window.navigator.geolocation.getCurrentPosition(
       position => {
@@ -47,7 +48,10 @@ class Map extends Component {
         defaultSettings.latitude = latitude;
         defaultSettings.longitude = longitude;
 
-        this.setState({ defaultSettings: defaultSettings });
+        this.setState({
+          defaultSettings: defaultSettings,
+          user: { latitude: latitude, longitude: longitude }
+        });
       },
       err => {
         console.log(err.message);
@@ -55,8 +59,8 @@ class Map extends Component {
         defaultSettings.longitude = 144.9623;
       }
     );
-    /*let request = await api.get("/tafe_info");
-    let response = request.data.data;*/
+    let request = await api.get("/occupation_tafe");
+    let response = request.data.data;
 
     this.setState({ data: response });
   };
@@ -86,9 +90,10 @@ class Map extends Component {
   renderSidePanelItems = searchText => {
     return this.state.data
       .filter(item =>
-        item.tafe_name.toLowerCase().includes(searchText.trim().toLowerCase())
+        item.occupation.toLowerCase().includes(searchText.trim().toLowerCase())
       )
       .map(item => {
+        debugger;
         return (
           <div key={item.tafe_id} style={{ borderBottom: "1px solid #eee" }}>
             <a
@@ -97,11 +102,15 @@ class Map extends Component {
               onClick={e => {
                 e.preventDefault();
                 this.flyToPoint(Number(item.latitude), Number(item.longitude));
+                this.setState({ popupInfo: item });
               }}
             >
               <div className="mx-2">
                 <h6 className="mt-2">{item.tafe_name}</h6>
-                <p>{item.street_address}</p>
+                <p>
+                  {item.street_address}, {item.suburb}, {item.postcode}
+                </p>
+                <p>Courses in: {item.occupation}</p>
               </div>
             </a>
           </div>
@@ -148,7 +157,7 @@ class Map extends Component {
         </div>
       );
     }
-
+    console.log(this.state.data);
     return (
       <>
         <div
@@ -181,10 +190,23 @@ class Map extends Component {
             transitionDuration={500}
             transitionInterpolator={new FlyToInterpolator()}
           >
+            {this.state.user && (
+              <Marker
+                key="user"
+                latitude={this.state.user.latitude}
+                longitude={this.state.user.longitude}
+              >
+                <CityPin
+                  size={20}
+                  onClick={() => this.setState({ popupInfo: this.state.user })}
+                  color="#5e34eb"
+                />
+              </Marker>
+            )}
             {this.renderMarker()}
             {this.renderPopup()}
             <div className="nav" style={navStyle}>
-              <NavigationControl />
+              <NavigationControl showCompass={false} />
             </div>
           </MapGL>
         </div>
@@ -193,7 +215,7 @@ class Map extends Component {
   }
 }
 
-const response = [
+/*const response = [
   {
     tafe_id: 1,
     tafe_name: "name1",
@@ -209,7 +231,7 @@ const response = [
     suburb: "2 Tafe",
     latitude: -37.878443,
     longitude: 145.03422
-  } /*,
+  } ,
   {
     tafe_id: 3,
     tafe_name: "name1",
@@ -252,7 +274,7 @@ const response = [
             }}
           />
   
-  */
-];
+  
+];*/
 
 export default Map;
