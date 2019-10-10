@@ -12,7 +12,7 @@ class JobInsight extends Component {
             <div className="row">
               <div className="col-lg-12 text-center">
                 <h2 className="section-heading">Job Posting Trends</h2>
-                <p>Part time postings in 2018, Victoria</p>
+                <p>Part time job postings in 2018, Victoria</p>
               </div>
               <JobPosting />
             </div>
