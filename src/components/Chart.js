@@ -23,7 +23,7 @@ class Chart extends Component {
             {
               scaleLabel: {
                 display: true,
-                labelString: "Months"
+                labelString: "Months in 2018"
               }
             }
           ],
