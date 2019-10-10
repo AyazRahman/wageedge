@@ -34,7 +34,7 @@ class JobPosting extends Component {
     let request = await api.get("/job_posting/industry");
 
     let response = request.data.data;
-    console.log(response);
+
     let dataSets = [];
     let options = response.map((item, index) => {
       dataSets.push(item.detail.map(item => item.count));

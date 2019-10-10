@@ -6,8 +6,7 @@ export default class LocationInfo extends PureComponent {
       tafe_name = "Your Location",
       street_address = "",
       suburb = "",
-      postcode = "",
-      occupation = ""
+      postcode = ""
     } = this.props.info;
     if (tafe_name === "Your Location") {
       return (
@@ -23,8 +22,6 @@ export default class LocationInfo extends PureComponent {
         <div>
           {street_address}, {suburb}, {postcode}
         </div>
-        <br />
-        <div>Courses in: {occupation}</div>
       </div>
     );
   }

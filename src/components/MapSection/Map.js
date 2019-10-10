@@ -59,7 +59,8 @@ class Map extends Component {
         defaultSettings.longitude = 144.9623;
       }
     );
-    let request = await api.get("/occupation_tafe");
+    let request = await api.get("/tafe_info");
+
     let response = request.data.data;
 
     this.setState({ data: response });
@@ -77,8 +78,8 @@ class Map extends Component {
         <Popup
           tipSize={5}
           anchor="top"
-          longitude={popupInfo.longitude}
-          latitude={popupInfo.latitude}
+          longitude={Number(popupInfo.longitude)}
+          latitude={Number(popupInfo.latitude)}
           closeOnClick={false}
           onClose={() => this.setState({ popupInfo: null })}
         >
@@ -90,10 +91,9 @@ class Map extends Component {
   renderSidePanelItems = searchText => {
     return this.state.data
       .filter(item =>
-        item.occupation.toLowerCase().includes(searchText.trim().toLowerCase())
+        item.tafe_name.toLowerCase().includes(searchText.trim().toLowerCase())
       )
       .map(item => {
-        debugger;
         return (
           <div key={item.tafe_id} style={{ borderBottom: "1px solid #eee" }}>
             <a
@@ -110,7 +110,6 @@ class Map extends Component {
                 <p>
                   {item.street_address}, {item.suburb}, {item.postcode}
                 </p>
-                <p>Courses in: {item.occupation}</p>
               </div>
             </a>
           </div>
@@ -157,7 +156,7 @@ class Map extends Component {
         </div>
       );
     }
-    console.log(this.state.data);
+
     return (
       <>
         <div
