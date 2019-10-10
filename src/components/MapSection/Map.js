@@ -59,7 +59,7 @@ class Map extends Component {
         defaultSettings.longitude = 144.9623;
       }
     );
-    let request = await api.get("/tafe_info");
+    let request = await api.get("/occupation_tafe");
 
     let response = request.data.data;
 
@@ -91,7 +91,7 @@ class Map extends Component {
   renderSidePanelItems = searchText => {
     return this.state.data
       .filter(item =>
-        item.tafe_name.toLowerCase().includes(searchText.trim().toLowerCase())
+        item.occupation.toLowerCase().includes(searchText.trim().toLowerCase())
       )
       .map(item => {
         return (
@@ -110,6 +110,7 @@ class Map extends Component {
                 <p>
                   {item.street_address}, {item.suburb}, {item.postcode}
                 </p>
+                <p>Courses in: {item.occupation}</p>
               </div>
             </a>
           </div>
