@@ -110,7 +110,9 @@ class Map extends Component {
                 <p>
                   {item.street_address}, {item.suburb}, {item.postcode}
                 </p>
-                <p>Courses in: {item.occupation}</p>
+                <p>
+                  <strong>Courses in:</strong> {item.occupation}
+                </p>
               </div>
             </a>
           </div>
@@ -169,7 +171,7 @@ class Map extends Component {
               <input
                 className="form-control my-2 "
                 type="text"
-                placeholder="Search"
+                placeholder="Search by course"
                 onChange={this.onInputChange}
                 value={this.state.searchText}
               />
