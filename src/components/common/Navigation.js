@@ -76,7 +76,7 @@ class Navigation extends Component {
                 <Link
                   onClick={() => this.toggleShow()}
                   className={`nav-link ${
-                    active === "/minwage" ? "active-link" : ""
+                    active === "/jobinsight" ? "active-link" : ""
                   }`}
                   to="/jobinsight"
                 >
