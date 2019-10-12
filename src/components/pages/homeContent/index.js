@@ -68,7 +68,7 @@ export const section = () => {
             </Link>
           </div>
           <div className="col-md-3 col-sm-6 my-2">
-            <Link to="/workrights/6">
+            <Link to="/workrights/5">
               <div className="p-2 bg-white rounded h-100 border hCard">
                 <span className="fa-stack fa-2x ">
                   <i className="fas fa-circle fa-stack-2x text-primary" />

@@ -7,7 +7,7 @@ export default class LocationInfo extends PureComponent {
       street_address = "",
       suburb = "",
       postcode = "",
-      occupation = ""
+      tafe_url = "#"
     } = this.props.info;
     if (tafe_name === "Your Location") {
       return (
@@ -25,7 +25,9 @@ export default class LocationInfo extends PureComponent {
         </div>
 
         <div>
-          <strong>Courses in:</strong> {occupation}
+          <a href={tafe_url} target="_blank" rel="noopener noreferrer">
+            Visit Website
+          </a>
         </div>
       </div>
     );

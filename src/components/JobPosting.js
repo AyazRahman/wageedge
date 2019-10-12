@@ -70,10 +70,18 @@ class JobPosting extends Component {
     if (data)
       return (
         <>
-          <div className="col-lg-12" style={{ maxWidth: "300px" }}>
+          <div className="col-lg-12" style={{ maxWidth: "400px" }}>
             <select
               className="form-control"
-              onChange={e => this.setState({ selected: e.target.value })}
+              onChange={e => {
+                data[e.target.value].occupation
+                  ? this.props.handleChange(
+                      data[e.target.value].occupation,
+                      data[e.target.value].industry_name
+                    )
+                  : this.props.handleChange(null, null);
+                this.setState({ selected: e.target.value });
+              }}
             >
               {this.renderOptions(options)}
             </select>

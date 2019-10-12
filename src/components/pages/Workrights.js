@@ -168,6 +168,11 @@ class Workrights extends Component {
               <b>cannot take money from your wages unless</b> you agree and the
               deduction benefits you, or unless your industrial instrument
               permits it.
+              <p>
+                For example, if you accidentally break something, the employer
+                cannot deduct money from your wages. Further, an employer cannot
+                <b> force you to agree to a deduction</b>.
+              </p>
             </div>
             <div className="col-lg-12 text-center">
               <img
@@ -177,11 +182,6 @@ class Workrights extends Component {
               />
             </div>
             <div className="col-lg-12">
-              <p>
-                For example, if you accidentally break something, the employer
-                cannot deduct money from your wages. Further, an employer cannot
-                <b> force you to agree to a deduction</b>.
-              </p>
               <p>
                 Generally, an employer cannot deduct any money from your wages
                 unless the deduction is:

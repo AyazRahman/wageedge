@@ -12,7 +12,7 @@ class Chart extends Component {
         datasets: [
           {
             data: data,
-            backgroundColor: "rgba(254,209,54, 0.5)"
+            backgroundColor: "rgba(254,209,54, 0.8)"
           }
         ]
       },
@@ -72,9 +72,9 @@ class Chart extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container" style={{ maxWidth: "1000px" }}>
         <div className="row">
-          <div className="chart col">{this.renderChart("line")}</div>
+          <div className="chart col">{this.renderChart("bar")}</div>
         </div>
       </div>
     );

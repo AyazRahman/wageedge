@@ -96,7 +96,7 @@ const LegalAdvice = () => {
                     {" "}
                     - Award-winning Study Melbourne Student Centre offers free
                     support, information and contacts to help international
-                    students enjoy living , studying and working in Victoria.
+                    students enjoy living, studying and working in Victoria.
                   </span>
                 </li>
                 <li className="mb-2">

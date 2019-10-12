@@ -7,7 +7,7 @@ import MapGL, {
   Popup
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import api from "../../API/api";
+
 import CityPin from "./CityPin";
 import LocationInfo from "./LocationInfo";
 
@@ -19,8 +19,8 @@ const navStyle = {
 };
 
 class Map extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       defaultSettings: {
         latitude: -37.8124,
@@ -31,11 +31,18 @@ class Map extends Component {
       },
       searchText: "",
       popupInfo: null,
-      user: null
+      user: null,
+      data: this.props.data
     };
   }
   componentDidMount() {
     this.getData();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.data !== prevProps.data) {
+      this.setState({ data: this.props.data, popupInfo: null });
+    }
   }
 
   getData = async () => {
@@ -59,11 +66,6 @@ class Map extends Component {
         defaultSettings.longitude = 144.9623;
       }
     );
-    let request = await api.get("/occupation_tafe");
-
-    let response = request.data.data;
-
-    this.setState({ data: response });
   };
 
   onInputChange = event => {
@@ -91,7 +93,7 @@ class Map extends Component {
   renderSidePanelItems = searchText => {
     return this.state.data
       .filter(item =>
-        item.occupation.toLowerCase().includes(searchText.trim().toLowerCase())
+        item.suburb.toLowerCase().includes(searchText.trim().toLowerCase())
       )
       .map(item => {
         return (
@@ -109,9 +111,6 @@ class Map extends Component {
                 <h6 className="mt-2">{item.tafe_name}</h6>
                 <p>
                   {item.street_address}, {item.suburb}, {item.postcode}
-                </p>
-                <p>
-                  <strong>Courses in:</strong> {item.occupation}
                 </p>
               </div>
             </a>
@@ -161,17 +160,17 @@ class Map extends Component {
     }
 
     return (
-      <>
+      <div className="row">
         <div
           className="col-md-3 rounded"
-          style={{ border: "1px solid #eee", padding: 0, height: "50vh" }}
+          style={{ padding: 0, height: "50vh" }}
         >
           <div style={{ borderBottom: "1px solid #eee" }}>
             <div className="px-2">
               <input
                 className="form-control my-2 "
                 type="text"
-                placeholder="Search by course"
+                placeholder="Search by suburb"
                 onChange={this.onInputChange}
                 value={this.state.searchText}
               />
@@ -212,7 +211,7 @@ class Map extends Component {
             </div>
           </MapGL>
         </div>
-      </>
+      </div>
     );
   }
 }
