@@ -26,14 +26,14 @@ class JobInsight extends Component {
                 <p>
                   If you are getting unfair treatment at work, another option
                   after taking a legal action would be to switch jobs. You can
-                  find a job either in the same industry or a different
+                  find a job either in the same industry or in a different
                   industry. The information below would assist you to find which
-                  month of the year is the best time to find a job in that
-                  industry. If you have no experience in that specific field,
-                  you can also consider taking some short courses that will
-                  improve your skillsets. Before enrolling yourself in any
-                  course, make sure you are not violation any visa restrictions.
-                  More information on student visa restrictions can be found{" "}
+                  month of the year is the best time to find a job in a specific
+                  industry. If you have no experience in that field, you can
+                  also consider taking some short courses that will improve your
+                  skillsets. Before enrolling yourself in any course, make sure
+                  you are not violating any visa restrictions. More information
+                  on student visa restrictions can be found{" "}
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
