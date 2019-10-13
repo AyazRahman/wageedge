@@ -15,9 +15,9 @@ class Details extends Component {
   render() {
     let { item } = this.state;
     let { hour_per_rate, week_per_rate, public_holiday } = item;
-    let hour_percentage = ~~((hour_per_rate / 30) * 90);
-    let week_percentage = ~~((week_per_rate / 1200) * 90);
-    let public_percentage = ~~((public_holiday / 100) * 90);
+    let hour_percentage = ~~((hour_per_rate / 30) * 100);
+    let week_percentage = ~~((week_per_rate / 1000) * 100);
+    let public_percentage = ~~((public_holiday / 100) * 100);
     return (
       <>
         <h3 className="text-primary">{item.industry}</h3>
@@ -37,12 +37,6 @@ class Details extends Component {
                 aria-valuemax="30"
                 style={{ width: hour_percentage + "%" }}
               ></div>
-              <div
-                className="text-right px-2"
-                style={{ width: 100 - hour_percentage + "%" }}
-              >
-                30
-              </div>
             </div>
           </div>
         </div>
@@ -61,22 +55,16 @@ class Details extends Component {
                 aria-valuemax="30"
                 style={{ width: week_percentage + "%" }}
               ></div>
-              <div
-                className="text-right px-2"
-                style={{ width: 100 - week_percentage + "%" }}
-              >
-                1000
-              </div>
             </div>
           </div>
         </div>
         <div className="row mb-2" style={{ fontSize: 20 }}>
-          <div className="col-5">Holiday Pay Rate</div>
+          <div className="col-5">Public Holiday Hourly Pay Rate</div>
           <div className="col-2">
             <strong className="text-primary">${public_holiday}</strong>
           </div>
           <div className="col-5">
-            <div className="progress h-100" style={{ fontSize: 20 }}>
+            <div className="progress" style={{ fontSize: 20, height: "30px" }}>
               <div
                 className="bg-warning progress-bar"
                 role="progressbar"
@@ -85,12 +73,6 @@ class Details extends Component {
                 aria-valuemax="30"
                 style={{ width: public_percentage + "%" }}
               ></div>
-              <div
-                className="text-right px-2"
-                style={{ width: 100 - public_percentage + "%" }}
-              >
-                100
-              </div>
             </div>
           </div>
         </div>
