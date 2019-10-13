@@ -147,9 +147,6 @@ export const about = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <img className="img-fluid" src="img/about-us.jpg" alt="about us" />
-          </div>
-          <div className="col-md-6">
             <h2>About us</h2>
             <p style={{ fontSize: 20 }} className="mt-3">
               We aim to help international students to figure out the minimum
@@ -157,6 +154,40 @@ export const about = () => {
               rights, and also make them aware of the legal rights they have as
               an international student in Australia.
             </p>
+          </div>
+          <div className="col-md-6">
+            <img className="img-fluid" src="img/about-us.jpg" alt="about us" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const jobPosting = () => {
+  return (
+    <section className="page-section">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <img
+              className="img-fluid"
+              src="img/job_posting.jpg"
+              alt="role play"
+            />
+          </div>
+          <div className="col-md-6">
+            <h2>Career Assist</h2>
+            <p style={{ fontSize: 20 }} className="mt-3">
+              Want know how job posting trends changes over time? Different
+              industry requires different skills some of which might be easily
+              attainable through short courses.
+            </p>
+            <Link to="/careerassist">
+              <button className="btn btn-primary btn-lg mt-3">
+                Learn More
+              </button>
+            </Link>
           </div>
         </div>
       </div>

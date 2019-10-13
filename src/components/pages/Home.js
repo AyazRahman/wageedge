@@ -5,6 +5,7 @@ import {
   minwage,
   educationModule,
   legalAdvice,
+  jobPosting,
   about
 } from "./homeContent";
 
@@ -17,6 +18,7 @@ const Home = () => {
       {minwage()}
       {educationModule()}
       {legalAdvice()}
+      {jobPosting()}
       {about()}
     </div>
   );

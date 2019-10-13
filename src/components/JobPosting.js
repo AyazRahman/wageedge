@@ -99,41 +99,4 @@ class JobPosting extends Component {
   }
 }
 
-/*const response = [
-  {
-    industry_name: "Total",
-    detail: [
-      { post_month: 1, count: 40 },
-      { post_month: 2, count: 43 },
-      { post_month: 3, count: 12 },
-      { post_month: 4, count: 11 },
-      { post_month: 5, count: 5 },
-      { post_month: 6, count: 12 },
-      { post_month: 7, count: 13 },
-      { post_month: 8, count: 10 },
-      { post_month: 9, count: 15 },
-      { post_month: 10, count: 20 },
-      { post_month: 11, count: 21 },
-      { post_month: 12, count: 30 }
-    ]
-  },
-  {
-    industry_name: "Hospitality & Tourism",
-    detail: [
-      { post_month: 1, count: 12 },
-      { post_month: 2, count: 45 },
-      { post_month: 3, count: 10 },
-      { post_month: 4, count: 12 },
-      { post_month: 5, count: 25 },
-      { post_month: 6, count: 25 },
-      { post_month: 7, count: 36 },
-      { post_month: 8, count: 52 },
-      { post_month: 9, count: 11 },
-      { post_month: 10, count: 10 },
-      { post_month: 11, count: 15 },
-      { post_month: 12, count: 12 }
-    ]
-  }
-];*/
-
 export default JobPosting;

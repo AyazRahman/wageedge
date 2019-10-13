@@ -1,4 +1,17 @@
 import React, { Component } from "react";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  RedditShareButton,
+  RedditIcon,
+  EmailShareButton,
+  EmailIcon
+} from "react-share";
+
 import api from "../../API/api";
 import Question from "../Question";
 import Breadcrumb from "../breadcrumb";
@@ -285,16 +298,7 @@ class Quiz extends Component {
       correctQuestions,
       totalQuestions
     } = this.calculateInfo();
-    setTimeout(() => {
-      var addthisScript = document.createElement("script");
-      addthisScript.setAttribute(
-        "src",
-        "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d765179055d2125"
-      );
-      addthisScript.setAttribute("id", "addthis");
-      if (document.body && !document.getElementById("addthis"))
-        document.body.appendChild(addthisScript);
-    });
+
     return (
       <React.Fragment>
         <div className="col-lg-12 text-center">
@@ -309,13 +313,38 @@ class Quiz extends Component {
             <p>Total Questions: {totalQuestions}</p>
             <p>Accuracy: {yourScore}%</p>
           </div>
-          <div className="col-md-6 text-center">
+          <div className="col-md-6">
             <p>Share with your friends</p>
 
-            <div
-              className="addthis_inline_share_toolbox"
-              data-url="https://www.wageedge.tk/#/quiz"
-            ></div>
+            <div className="text-center w-100">
+              <div className="row ml-1">
+                <div>
+                  <FacebookShareButton url="https://www.wageedge.tk/#/quiz">
+                    <FacebookIcon size={35}></FacebookIcon>
+                  </FacebookShareButton>
+                </div>
+                <div>
+                  <TwitterShareButton url="https://www.wageedge.tk/#/quiz">
+                    <TwitterIcon size={35} />
+                  </TwitterShareButton>
+                </div>
+                <div>
+                  <LinkedinShareButton url="https://www.wageedge.tk/#/quiz">
+                    <LinkedinIcon size={35} />
+                  </LinkedinShareButton>
+                </div>
+                <div>
+                  <RedditShareButton url="https://www.wageedge.tk/#/quiz">
+                    <RedditIcon size={35} />
+                  </RedditShareButton>
+                </div>
+                <div>
+                  <EmailShareButton url="https://www.wageedge.tk/#/quiz">
+                    <EmailIcon size={35} />
+                  </EmailShareButton>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-lg-12">

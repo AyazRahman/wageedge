@@ -15,23 +15,20 @@ class Details extends Component {
   render() {
     let { item } = this.state;
     let { hour_per_rate, week_per_rate, public_holiday } = item;
-    let hour_percentage = ~~((hour_per_rate / 30) * 80);
-    let week_percentage = ~~((week_per_rate / 1200) * 80);
-    let public_percentage = ~~((public_holiday / 100) * 80);
+    let hour_percentage = ~~((hour_per_rate / 30) * 90);
+    let week_percentage = ~~((week_per_rate / 1200) * 90);
+    let public_percentage = ~~((public_holiday / 100) * 90);
     return (
       <>
         <h3 className="text-primary">{item.industry}</h3>
         <hr />
         <div className="row mb-2" style={{ fontSize: 20 }}>
+          <div className="col-5">Hourly Pay Rate</div>
           <div className="col-2">
             <strong className="text-primary">${hour_per_rate}</strong>
           </div>
-          <div className="col-5">Hourly Pay Rate</div>
           <div className="col-5">
             <div className="progress h-100" style={{ fontSize: 20 }}>
-              <div className="px-2" style={{ width: "10%" }}>
-                1
-              </div>
               <div
                 className="bg-warning progress-bar"
                 role="progressbar"
@@ -42,7 +39,7 @@ class Details extends Component {
               ></div>
               <div
                 className="text-right px-2"
-                style={{ width: 100 - hour_percentage - 10 + "%" }}
+                style={{ width: 100 - hour_percentage + "%" }}
               >
                 30
               </div>
@@ -50,15 +47,12 @@ class Details extends Component {
           </div>
         </div>
         <div className="row mb-2" style={{ fontSize: 20 }}>
+          <div className="col-5">Weekly Pay Rate</div>
           <div className="col-2">
             <strong className="text-primary">${week_per_rate}</strong>
           </div>
-          <div className="col-5">Weekly Pay Rate</div>
           <div className="col-5">
             <div className="progress h-100" style={{ fontSize: 20 }}>
-              <div className="px-2" style={{ width: "10%" }}>
-                1
-              </div>
               <div
                 className="bg-warning progress-bar"
                 role="progressbar"
@@ -69,7 +63,7 @@ class Details extends Component {
               ></div>
               <div
                 className="text-right px-2"
-                style={{ width: 100 - 10 - week_percentage + "%" }}
+                style={{ width: 100 - week_percentage + "%" }}
               >
                 1000
               </div>
@@ -77,15 +71,12 @@ class Details extends Component {
           </div>
         </div>
         <div className="row mb-2" style={{ fontSize: 20 }}>
+          <div className="col-5">Holiday Pay Rate</div>
           <div className="col-2">
             <strong className="text-primary">${public_holiday}</strong>
           </div>
-          <div className="col-5">Holiday Pay Rate</div>
           <div className="col-5">
             <div className="progress h-100" style={{ fontSize: 20 }}>
-              <div className="px-2" style={{ width: "10%" }}>
-                1
-              </div>
               <div
                 className="bg-warning progress-bar"
                 role="progressbar"
@@ -96,7 +87,7 @@ class Details extends Component {
               ></div>
               <div
                 className="text-right px-2"
-                style={{ width: 100 - 10 - public_percentage + "%" }}
+                style={{ width: 100 - public_percentage + "%" }}
               >
                 100
               </div>

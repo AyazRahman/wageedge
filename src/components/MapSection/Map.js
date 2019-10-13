@@ -91,11 +91,17 @@ class Map extends Component {
     );
   };
   renderSidePanelItems = searchText => {
-    return this.state.data
-      .filter(item =>
-        item.suburb.toLowerCase().includes(searchText.trim().toLowerCase())
-      )
-      .map(item => {
+    let result = this.state.data.filter(item =>
+      item.suburb.toLowerCase().includes(searchText.trim().toLowerCase())
+    );
+    if (result.length === 0) {
+      return (
+        <div className="col-lg-12">
+          <p>No Results Found</p>
+        </div>
+      );
+    } else {
+      return result.map(item => {
         return (
           <div key={item.tafe_id} style={{ borderBottom: "1px solid #eee" }}>
             <a
@@ -117,6 +123,7 @@ class Map extends Component {
           </div>
         );
       });
+    }
   };
 
   renderMarker = () => {

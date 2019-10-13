@@ -7,6 +7,7 @@ import {
   minwage,
   educationModule,
   legalAdvice,
+  jobPosting,
   about
 } from "./homeContent";
 
@@ -29,6 +30,7 @@ class Workright extends Component {
         {minwage()}
         {educationModule()}
         {legalAdvice()}
+        {jobPosting()}
         {about()}
       </div>
     );

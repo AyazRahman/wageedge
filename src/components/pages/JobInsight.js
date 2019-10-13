@@ -21,7 +21,7 @@ class JobInsight extends Component {
             <div className="row">
               <div className="col-lg-12 mb-5">
                 <div className="col-lg-12 text-center">
-                  <h3>TBD</h3>
+                  <h3>Career Assist</h3>
                 </div>
                 <p>
                   If you are getting unfair treatment at work, another option
@@ -45,7 +45,9 @@ class JobInsight extends Component {
                 </p>
               </div>
               <div className="col-lg-12 text-center">
-                <h5 className="section-heading">Job Posting Trends</h5>
+                <h5 className="section-heading">
+                  Job Posting Trends for different industries
+                </h5>
                 <p>Part time job postings in 2018, Victoria</p>
               </div>
               <JobPosting handleChange={this.handleOccupation} />
