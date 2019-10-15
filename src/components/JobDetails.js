@@ -76,9 +76,11 @@ class JobDetails extends Component {
   renderMap = () => {
     if (this.state.locations.length > 0) {
       return (
-        <div className="col-lg-12 border rounded py-3 mt-2">
-          <div className="col-lg-12 text-center">
-            <h5>Locations:</h5>
+        <div className="col-lg-12 border rounded pb-3 mt-2">
+          <div className="row rounded" style={{ backgroundColor: "#3794A4" }}>
+            <div className="col-lg-12 text-center pt-2">
+              <h5>Location:</h5>
+            </div>
           </div>
           <p>
             The map shows locations of of registered training organizations that
@@ -115,9 +117,11 @@ class JobDetails extends Component {
         message={this.renderSpinner()}
         style={{ width: "100%" }}
       >
-        <div className="col-lg-12 border rounded py-3">
-          <div className="col-lg-12 text-center">
-            <h5>Occupations:</h5>
+        <div className="col-lg-12 border rounded pb-3">
+          <div className="row rounded" style={{ backgroundColor: "#8BC34A" }}>
+            <div className="col-lg-12 text-center pt-2">
+              <h5>Occupations:</h5>
+            </div>
           </div>
           <p>For {this.state.industry_name}, select a relevant occupation: </p>
           <select
@@ -131,9 +135,11 @@ class JobDetails extends Component {
             {this.renderOptions(this.state.occupation)}
           </select>
         </div>
-        <div className="col-lg-12 border rounded py-3 mt-2">
-          <div className="col-lg-12 text-center">
-            <h5>Courses Available:</h5>
+        <div className="col-lg-12 border rounded pb-3 mt-2">
+          <div className="row rounded" style={{ backgroundColor: "#FCD559" }}>
+            <div className="col-lg-12 text-center pt-2">
+              <h5>Courses Available:</h5>
+            </div>
           </div>
           {this.state.courses && (
             <div className="row">

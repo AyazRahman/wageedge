@@ -307,11 +307,21 @@ class Quiz extends Component {
         <div className="row col-lg-12 my-3">
           <div className="col-md-6">
             <h4>Quiz Review:</h4>
-            <p>Your Score: {yourScore}</p>
-            <p>Total Score: {totalScore}</p>
-            <p>Correct Questions: {correctQuestions}</p>
-            <p>Total Questions: {totalQuestions}</p>
-            <p>Accuracy: {yourScore}%</p>
+            <p>
+              Your Score: <strong>{yourScore}</strong>
+            </p>
+            <p>
+              Total Score: <strong>{totalScore}</strong>
+            </p>
+            <p>
+              Correct Questions: <strong>{correctQuestions}</strong>
+            </p>
+            <p>
+              Total Questions: <strong>{totalQuestions}</strong>
+            </p>
+            <p>
+              Accuracy: <strong>{yourScore}%</strong>
+            </p>
           </div>
           <div className="col-md-6">
             <p>Share with your friends</p>
@@ -353,8 +363,17 @@ class Quiz extends Component {
             return (
               <div key={question.id} className="my-4">
                 <p>{question.title}</p>
-                <p>Your answer: {question.answered}</p>
-                <p>Correct answer: {question.answer}</p>
+                <p>
+                  Your answer: {question.answered}{" "}
+                  {question.answered === question.answer ? (
+                    <i className="fas fa-check text-success"></i>
+                  ) : (
+                    <i className="fas fa-times text-danger"></i>
+                  )}
+                </p>
+                {question.answered !== question.answer && (
+                  <p>Correct answer: {question.answer}</p>
+                )}
               </div>
             );
           })}
