@@ -38,6 +38,9 @@ const Minwage = () => {
           </div>
         </div>
         <div className="row my-5">
+          <div className="col-lg-12">
+            <p>Click on an icon to see more information</p>
+          </div>
           <Dashboard />
         </div>
       </div>

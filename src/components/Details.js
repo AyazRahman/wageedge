@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+const MIN_HOUR_PERC = ~~((19.49 / 30) * 100);
+const MIN_WEEK_PERC = ~~((740.8 / 1000) * 100);
+
 class Details extends Component {
   constructor(props) {
     super(props);
@@ -15,8 +18,8 @@ class Details extends Component {
   render() {
     let { item } = this.state;
     let { hour_per_rate, week_per_rate, public_holiday } = item;
-    let hour_percentage = ~~((hour_per_rate / 30) * 100);
-    let week_percentage = ~~((week_per_rate / 1000) * 100);
+    let hour_percentage = ~~((hour_per_rate / 30) * 100) - MIN_HOUR_PERC;
+    let week_percentage = ~~((week_per_rate / 1000) * 100) - MIN_WEEK_PERC;
     let public_percentage = ~~((public_holiday / 100) * 100);
     return (
       <>
@@ -33,9 +36,20 @@ class Details extends Component {
                 className="bg-warning progress-bar"
                 role="progressbar"
                 aria-valuenow="15"
-                aria-valuemin="1"
+                aria-valuemin="0"
                 aria-valuemax="30"
-                style={{ width: hour_percentage + "%" }}
+                style={{ width: MIN_HOUR_PERC + "%" }}
+              ></div>
+              <div
+                className="progress-bar"
+                role="progressbar"
+                aria-valuenow="15"
+                aria-valuemin="0"
+                aria-valuemax="30"
+                style={{
+                  width: hour_percentage + "%",
+                  backgroundColor: "#ffda5e"
+                }}
               ></div>
             </div>
           </div>
@@ -51,9 +65,20 @@ class Details extends Component {
                 className="bg-warning progress-bar"
                 role="progressbar"
                 aria-valuenow="15"
-                aria-valuemin="1"
-                aria-valuemax="30"
-                style={{ width: week_percentage + "%" }}
+                aria-valuemin="0"
+                aria-valuemax="1000"
+                style={{ width: MIN_WEEK_PERC + "%" }}
+              ></div>
+              <div
+                className="progress-bar"
+                role="progressbar"
+                aria-valuenow="15"
+                aria-valuemin="0"
+                aria-valuemax="1000"
+                style={{
+                  width: week_percentage + "%",
+                  backgroundColor: "#ffda5e"
+                }}
               ></div>
             </div>
           </div>
@@ -69,8 +94,8 @@ class Details extends Component {
                 className="bg-warning progress-bar"
                 role="progressbar"
                 aria-valuenow="15"
-                aria-valuemin="1"
-                aria-valuemax="30"
+                aria-valuemin="0"
+                aria-valuemax="100"
                 style={{ width: public_percentage + "%" }}
               ></div>
             </div>
