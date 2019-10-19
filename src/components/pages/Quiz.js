@@ -361,7 +361,7 @@ class Quiz extends Component {
           <h4>Question review section</h4>
           {this.state.questions.map(question => {
             return (
-              <div key={question.id} className="my-4">
+              <div key={question.id} className="my-4 border rounded px-2 pt-2">
                 <p>{question.title}</p>
                 <p>
                   Your answer: {question.answered}{" "}
