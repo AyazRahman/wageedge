@@ -1,3 +1,19 @@
+# WageEdge.tk
+
+WageEdge was created to help underpaid international students in Australia. This is designed to provide international students with workright information, actions they can take if they are currently underpaid and help them to change jobs if they want to.
+
+## What I learned
+
+- turning simple HTML code to JSX
+- Using React.js to build a finished product
+- Using react router to create and navigate between pages
+- Using react spring to create simple animations
+- Using react charts to create simple interactive charts
+- integrating axios to connect to api's and update the component states depending on the data fetched
+- Using react map gl to implement an interactive map
+- Using react loader to deactivate the dom while the data fetching is happening
+- Using react share to create share buttons
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
