@@ -1,6 +1,12 @@
 # WageEdge.tk
 
 WageEdge was created to help underpaid international students in Australia. This is designed to provide international students with workright information, actions they can take if they are currently underpaid and help them to change jobs if they want to.
+![](preview_files/image.png)
+![](preview_files/video.mp4)
+
+<video width="80%" height="240" controls>
+  <source src="./preview_files/video.mp4" type="video/mp4">
+</video><br>
 
 ## What I learned
 
