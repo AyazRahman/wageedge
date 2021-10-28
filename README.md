@@ -5,10 +5,8 @@ WageEdge was created to help underpaid international students in Australia. This
 
 ![](preview_files/image.png)
 
-<video width="80%" height="240" controls>
-  <source src="https://www.youtube.com/watch?v=7w1qrvDfV88" type="video/mp4">
-</video><br>
 
+Demo Video:
 [![Demo](https://img.youtube.com/vi/7w1qrvDfV88/0.jpg)](https://www.youtube.com/watch?v=7w1qrvDfV88 "Demo")
 
 ## What I learned
